@@ -1,0 +1,66 @@
+{
+    "hardcoded_credentials": {
+        "severity": 9,
+        "description": "Hardcoded credentials or API keys in code"
+    },
+    "command_injection": {
+        "severity": 10,
+        "description": "Possible command injection vulnerability"
+    },
+    "insecure_deserialization": {
+        "severity": 8,
+        "description": "Unsafe deserialization of user input"
+    },
+    "sql_injection": {
+        "severity": 9,
+        "description": "Possible SQL injection vulnerability"
+    },
+    "path_traversal": {
+        "severity": 7,
+        "description": "Path traversal vulnerability"
+    },
+    "insecure_ssl": {
+        "severity": 6,
+        "description": "Insecure SSL/TLS configuration"
+    },
+    "exec_eval": {
+        "severity": 10,
+        "description": "Use of exec() or eval() on untrusted input"
+    },
+    "bind_all_interfaces": {
+        "severity": 5,
+        "description": "Binding to all network interfaces (0.0.0.0)"
+    },
+    "insecure_file_operations": {
+        "severity": 6,
+        "description": "Insecure file operations without validation"
+    },
+    "request_without_verification": {
+        "severity": 5,
+        "description": "HTTP requests with SSL verification disabled"
+    },
+    "backdoor": {
+        "severity": 10,
+        "description": "Potential backdoor or malicious code"
+    },
+    "suspicious_network_activity": {
+        "severity": 9,
+        "description": "Suspicious network calls or data exfiltration attempts"
+    },
+    "obfuscated_code": {
+        "severity": 8,
+        "description": "Obfuscated or encoded code that might hide malicious intent"
+    },
+    "unauthorized_data_access": {
+        "severity": 8,
+        "description": "Unauthorized access to sensitive data or files"
+    },
+    "unusual_imports": {
+        "severity": 5,
+        "description": "Unusual or suspicious module imports"
+    },
+    "suspicious_process_creation": {
+        "severity": 9,
+        "description": "Creation of processes or threads with suspicious patterns"
+    }
+}

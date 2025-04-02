@@ -21,3 +21,20 @@ Cybersecurity class project on mitigating supply chain attacks
   "risk_level": "High"
 }
 ```
+
+## Analysis
+Two parts
+**Regex (String) Analysis:**
+
+Catches textual patterns that might be missed by AST parsing
+Works even if the code has syntax errors
+Can detect patterns that span multiple statements
+Better at finding obfuscated code
+
+
+**AST Analysis:**
+
+Understands the structure of the code
+Avoids false positives in comments and strings
+Can analyze complex relationships between nodes
+Better for understanding context
