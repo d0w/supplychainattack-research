@@ -1,5 +1,7 @@
 # supplychainattack-research
-Cybersecurity class project on mitigating supply chain attacks
+Cybersecurity class project on mitigating supply chain attacks.
+
+Program is written in multiple languages. Go is used as the primary bootstrapper that handles monitoring code changes and running routines. Inputted files are analyzed with a tool written in that respective language. For example, a Python file will be analyzed with `analyzer.py`.
 
 
 ## Common output format
