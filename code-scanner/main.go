@@ -7,8 +7,8 @@ import (
     "runtime"
     
     "github.com/spf13/cobra"
-    "github.com/d0w/supplychainattack-research/internal/scanner"
-    "github.com/d0w/supplychainattack-research/internal/reporter"
+    "github.com/d0w/supplychainattack-research/code-scanner/internal/scanner"
+    "github.com/d0w/supplychainattack-research/code-scanner/internal/reporter"
 )
 
 func main() {

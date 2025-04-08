@@ -9,7 +9,7 @@ import (
     "os"
     "sync"
 
-    "github.com/d0w/supplychainattack-research/internal/models"
+    "github.com/d0w/supplychainattack-research/code-scanner/internal/models"
 )
 
 // Analyzer defines the interface for language-specific analyzers

@@ -1,4 +1,4 @@
-module github.com/d0w/supplychainattack-research
+module github.com/d0w/supplychainattack-research/code-scanner
 
 go 1.24.2
 

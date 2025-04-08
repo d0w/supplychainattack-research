@@ -10,7 +10,7 @@ import (
     "text/tabwriter"
 
     "github.com/fatih/color"
-    "github.com/d0w/supplychainattack-research/internal/models"
+    "github.com/d0w/supplychainattack-research/code-scanner/internal/models"
 )
 
 // Reporter formats and outputs scan results

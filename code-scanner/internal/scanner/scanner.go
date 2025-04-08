@@ -5,9 +5,9 @@ import (
     // "path/filepath"
     "sync"
 
-    "github.com/d0w/supplychainattack-research/internal/analyzer"
-    "github.com/d0w/supplychainattack-research/internal/detector"
-    "github.com/d0w/supplychainattack-research/internal/models"
+    "github.com/d0w/supplychainattack-research/code-scanner/internal/analyzer"
+    "github.com/d0w/supplychainattack-research/code-scanner/internal/detector"
+    "github.com/d0w/supplychainattack-research/code-scanner/internal/models"
 )
 
 type Scanner struct {
