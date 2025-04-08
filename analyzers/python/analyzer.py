@@ -1,4 +1,3 @@
-# Add these imports at the top if not already present
 import ast
 import os
 import re
@@ -642,38 +641,63 @@ def scan_directory(directory, extensions=['.py']):
     return file_list
 
 def main():
-    parser = argparse.ArgumentParser(description='Analyze code for security vulnerabilities')
-    parser.add_argument('target', help='File or directory to analyze')
-    parser.add_argument('--format', choices=['text', 'json'], default='text', help='Output format')
-    parser.add_argument('--output', help='Output file (default: stdout)')
-    parser.add_argument('--extensions', default='.py', help='File extensions to analyze (comma-separated)')
+    # print("Running python analyzer")
+
+    """Script should take in a single python file to analyze"""
+    # test result
+    result = {
+        "file": "/path/to/file1",
+        "language": "python",
+        "vulnerabilities": [
+            {
+                "type": "sql_injection",
+                "severity": 9,
+                "line": 42,
+                "code": "query = f\"SELECT * FROM users WHERE id = '{user_id}'\"",
+                "description": "Possible SQL injection vulnerability"
+            }
+        ],
+        "risk_score": 7.5,
+        "risk_level": "High"
+    }
     
-    args = parser.parse_args()
-    target = args.target
-    extensions = args.extensions.split(',')
+        
+
+    # stdout gets piped to go module
+    print(json.dumps(result, indent=2))
+
+    # parser = argparse.ArgumentParser(description='Analyze code for security vulnerabilities')
+    # parser.add_argument('target', help='File or directory to analyze')
+    # parser.add_argument('--format', choices=['text', 'json'], default='text', help='Output format')
+    # parser.add_argument('--output', help='Output file (default: stdout)')
+    # parser.add_argument('--extensions', default='.py', help='File extensions to analyze (comma-separated)')
     
-    analyzer = VulnerabilityAnalyzer()
-    results = []
+    # args = parser.parse_args()
+    # target = args.target
+    # extensions = args.extensions.split(',')
     
-    if os.path.isfile(target):
-        results.append(analyzer.analyze_file(target))
-    elif os.path.isdir(target):
-        files = scan_directory(target, extensions)
-        for file in files:
-            print(f"Analyzing {file}...")
-            results.append(analyzer.analyze_file(file))
-    else:
-        print(f"Error: {target} is not a valid file or directory")
-        return
+    # analyzer = VulnerabilityAnalyzer()
+    # results = []
     
-    report = generate_report(results, args.format)
+    # if os.path.isfile(target):
+    #     results.append(analyzer.analyze_file(target))
+    # elif os.path.isdir(target):
+    #     files = scan_directory(target, extensions)
+    #     for file in files:
+    #         print(f"Analyzing {file}...")
+    #         results.append(analyzer.analyze_file(file))
+    # else:
+    #     print(f"Error: {target} is not a valid file or directory")
+    #     return
     
-    if args.output:
-        with open(args.output, 'w') as f:
-            f.write(report)
-        print(f"Report saved to {args.output}")
-    else:
-        print(report)
+    # report = generate_report(results, args.format)
+    
+    # if args.output:
+    #     with open(args.output, 'w') as f:
+    #         f.write(report)
+    #     print(f"Report saved to {args.output}")
+    # else:
+    #     print(report)
 
 if __name__ == "__main__":
     main()
