@@ -8,7 +8,7 @@ from collections import defaultdict
 class VulnerabilityAnalyzer:
     def __init__(self):
         # load vulnerability patterns and their severities
-        with open ("../metrics.json") as f:
+        with open ("code-scanner/analyzers/metrics.json") as f:
             self.vulnerability_patterns = json.load(f)
 
         
@@ -163,7 +163,7 @@ class VulnerabilityAnalyzer:
                 "risk_level": "Error"
             }
     
-    def check_backdoor_patterns(self, content, filepath):
+    def _check_backdoor_patterns(self, content, filepath):
         """Check for potential backdoors in code"""
         line_num = 1
         # for each line of code, check if pattern
@@ -208,7 +208,7 @@ class VulnerabilityAnalyzer:
         else:
             return "Generic suspicious pattern"
     
-    def check_suspicious_network_activity(self, content, tree, filepath):
+    def _check_suspicious_network_activity(self, content, tree, filepath):
         """Check for suspicious network activity"""
         line_num = 1
         for line in content.split('\n'):
@@ -273,7 +273,7 @@ class VulnerabilityAnalyzer:
         
         return
     
-    def check_obfuscated_code(self, content, filepath):
+    def _check_obfuscated_code(self, content, filepath):
         """Check for obfuscated code"""
         line_num = 1
         for line in content.split('\n'):
@@ -288,7 +288,7 @@ class VulnerabilityAnalyzer:
                     })
             line_num += 1
 
-    def check_unauthorized_data_access(self, content, tree, filepath):
+    def _check_unauthorized_data_access(self, content, tree, filepath):
         """Check for unauthorized access to sensitive data or files"""
         line_num = 1
         for line in content.split('\n'):
@@ -316,7 +316,7 @@ class VulnerabilityAnalyzer:
                             "description": f"Reading sensitive file: {filepath_arg}"
                         })
     
-    def check_unusual_imports(self, tree, filepath):
+    def _check_unusual_imports(self, tree, filepath):
         """Check for unusual or suspicious module imports"""
         unusual_count = 0
         suspicious_imports = []
@@ -361,7 +361,7 @@ class VulnerabilityAnalyzer:
                 "description": f"High number of unusual/suspicious module imports ({unusual_count})"
             })
     
-    def check_suspicious_process_creation(self, tree, content, filepath):
+    def _check_suspicious_process_creation(self, tree, content, filepath):
         """Check for suspicious process creation or shell commands""" 
         for node in ast.walk(tree):
             if isinstance(node, ast.Call):
@@ -398,7 +398,7 @@ class VulnerabilityAnalyzer:
                                     "file": filepath,
                                     "description": f"Suspicious os.system call: {command}"
                                 })
-    def get_risk_level(self, score):
+    def _get_risk_level(self, score):
             """Convert numeric score to risk level"""
             if score == 0:
                 return "Safe"
@@ -411,7 +411,7 @@ class VulnerabilityAnalyzer:
             else:
                 return "Critical"
         
-    def check_hardcoded_credentials(self, content, filepath):
+    def _check_hardcoded_credentials(self, content, filepath):
         """Check for hardcoded credentials"""        
         line_num = 1
         for line in content.split('\n'):
@@ -425,7 +425,7 @@ class VulnerabilityAnalyzer:
                     })
             line_num += 1
 
-    def check_command_injection(self, tree, content, filepath):
+    def _check_command_injection(self, tree, content, filepath):
         """Check for command injection vulnerabilities"""
         for node in ast.walk(tree):
             if isinstance(node, ast.Call):
@@ -447,7 +447,7 @@ class VulnerabilityAnalyzer:
                                     "file": filepath
                                 })
 
-    def check_insecure_deserialization(self, tree, content, filepath):
+    def _check_insecure_deserialization(self, tree, content, filepath):
         """Check for insecure deserialization"""
         for node in ast.walk(tree):
             if isinstance(node, ast.Call):
@@ -460,7 +460,7 @@ class VulnerabilityAnalyzer:
                             "file": filepath
                         })
 
-    def check_sql_injection(self, content, filepath):
+    def _check_sql_injection(self, content, filepath):
         """Check for SQL injection vulnerabilities"""
         sql_injection_patterns = [
             r"SELECT\s+.*\s+FROM\s+.*\s+WHERE\s+.*\s*=\s*'.*\{.*\}.*'",
@@ -483,7 +483,7 @@ class VulnerabilityAnalyzer:
                     })
             line_num += 1
 
-    def check_path_traversal(self, tree, content, filepath):
+    def _check_path_traversal(self, tree, content, filepath):
         """Check for path traversal vulnerabilities"""
         for node in ast.walk(tree):
             if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == 'open':
@@ -497,7 +497,7 @@ class VulnerabilityAnalyzer:
                             "file": filepath
                         })
 
-    def has_path_validation(self, content, line_num):
+    def _has_path_validation(self, content, line_num):
         """Check if there's path validation before the specified line"""
         lines = content.split('\n')[:line_num]
         for line in reversed(lines):
@@ -505,7 +505,7 @@ class VulnerabilityAnalyzer:
                 return True
         return False
 
-    def check_insecure_ssl(self, tree, content, filepath):
+    def _check_insecure_ssl(self, tree, content, filepath):
         """Check for insecure SSL/TLS configuration"""
         for node in ast.walk(tree):
             # Check for SSL verification disabled
@@ -532,7 +532,7 @@ class VulnerabilityAnalyzer:
                                 "file": filepath
                             })
 
-    def check_exec_eval(self, tree, content, filepath):
+    def _check_exec_eval(self, tree, content, filepath):
         """Check for exec() or eval() usage"""
         for node in ast.walk(tree):
             if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id in ['exec', 'eval']:
@@ -543,7 +543,7 @@ class VulnerabilityAnalyzer:
                     "file": filepath
                 })
 
-    def check_bind_all_interfaces(self, content, filepath):
+    def _check_bind_all_interfaces(self, content, filepath):
         """Check for binding to all network interfaces"""
         bind_pattern = r"\.bind\s*\(\s*\(?['\"]0\.0\.0\.0['\"]\)?"
         line_num = 1
@@ -556,7 +556,7 @@ class VulnerabilityAnalyzer:
                 })
             line_num += 1
 
-    def check_insecure_file_operations(self, tree, content, filepath):
+    def _check_insecure_file_operations(self, tree, content, filepath):
         """Check for insecure file operations"""
         for node in ast.walk(tree):
             if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == 'open':
@@ -644,27 +644,30 @@ def main():
     # print("Running python analyzer")
 
     """Script should take in a single python file to analyze"""
-    # test result
-    result = {
-        "file": "/path/to/file1",
-        "language": "python",
-        "vulnerabilities": [
-            {
-                "type": "sql_injection",
-                "severity": 9,
-                "line": 42,
-                "code": "query = f\"SELECT * FROM users WHERE id = '{user_id}'\"",
-                "description": "Possible SQL injection vulnerability"
-            }
-        ],
-        "risk_score": 7.5,
-        "risk_level": "High"
-    }
+    parser = argparse.ArgumentParser(description='Analyze code for security vulnerabilities')
+    parser.add_argument('target', help='File or directory to analyze')
+    parser.add_argument('--format', choices=['text', 'json'], default='json', help='Output format')
     
+    args = parser.parse_args()
+    target = args.target
+    
+    analyzer = VulnerabilityAnalyzer()
+    results = []
+    
+    if os.path.isfile(target):
+        results.append(analyzer.analyze_file(target))
+    elif os.path.isdir(target):
+        files = scan_directory(target, ['.py'])
+        for file in files:
+            results.append(analyzer.analyze_file(file))
+    else:
+        print(f"Error: {target} is not a valid file or directory")
+        return
         
-
-    # stdout gets piped to go module
-    print(json.dumps(result, indent=2))
+    if args.format == 'json':
+        print(json.dumps(results[0], indent=2))
+    else:
+        print(generate_report(results, args.format))
 
     # parser = argparse.ArgumentParser(description='Analyze code for security vulnerabilities')
     # parser.add_argument('target', help='File or directory to analyze')
