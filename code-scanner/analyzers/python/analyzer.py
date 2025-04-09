@@ -115,6 +115,7 @@ class VulnerabilityAnalyzer:
                                     ]
    
         self.results = defaultdict(list)
+    
         
     def analyze_file(self, filepath):
         """Analyze a single file for vulnerabilities"""
@@ -146,8 +147,8 @@ class VulnerabilityAnalyzer:
             self._check_suspicious_process_creation(tree, content, filepath)
             
             # Calculate risk score
-            # score = self._calculate_risk_score()
-            score = 10
+            score = self._calculate_risk_score()
+      
             
             return {
                 "filepath": filepath,
@@ -166,7 +167,43 @@ class VulnerabilityAnalyzer:
                 "risk_score": 0,
                 "risk_level": "Error"
             }
-    
+    def _calculate_risk_score(self):
+        """Calculate a risk score based on vulnerabilities found"""
+        if not self.results:
+            return 0.0
+            
+        total_severity = 0.0
+        vulnerability_count = 0
+        
+        # Iterate through all vulnerability types and their occurrences
+        for vuln_type, occurrences in self.results.items():
+            count = len(occurrences)
+            vulnerability_count += count
+            
+            # Get severity from vulnerability patterns
+            if vuln_type in self.vulnerability_patterns:
+                severity = float(self.vulnerability_patterns[vuln_type].get('severity', 5.0))
+            else:
+                severity = 5.0  # Default severity if not specified
+                
+            total_severity += severity * count
+        
+        # Return 0 if no vulnerabilities found
+        if vulnerability_count == 0:
+            return 0.0
+            
+        # Calculate average severity and apply a factor based on count
+        avg_severity = total_severity / vulnerability_count
+        
+        # Apply a multiplier based on number of vulnerabilities
+        # This increases the score for files with many vulnerabilities
+        count_factor = min(1.0 + (vulnerability_count / 10.0), 2.0)
+        
+        # Calculate final score with a maximum of 10
+        final_score = min(avg_severity * count_factor, 10.0)
+        
+        # Round to one decimal place
+        return round(final_score, 1)
     def _check_backdoor_patterns(self, content, filepath):
         """Check for potential backdoors in code"""
         line_num = 1
@@ -644,10 +681,8 @@ def scan_directory(directory, extensions=['.py']):
                 file_list.append(os.path.join(root, file))
     return file_list
 
-def main():
-    # print("Running python analyzer")
 
-    """Script should take in a single python file to analyze"""
+def main():
     parser = argparse.ArgumentParser(description='Analyze code for security vulnerabilities')
     parser.add_argument('target', help='File or directory to analyze')
     parser.add_argument('--format', choices=['text', 'json'], default='json', help='Output format')
@@ -659,17 +694,22 @@ def main():
     results = []
     
     if os.path.isfile(target):
-        results.append(analyzer.analyze_file(target))
+        result = analyzer.analyze_file(target)
+        results.append(result)
     elif os.path.isdir(target):
         files = scan_directory(target, ['.py'])
+        print(f"Found {len(files)} Python files")
         for file in files:
-            results.append(analyzer.analyze_file(file))
+            print(f"Analyzing {file}...")
+            result = analyzer.analyze_file(file)
+            results.append(result)
     else:
         print(f"Error: {target} is not a valid file or directory")
         return
-        
+    
+    # Output all results, not just the first one
     if args.format == 'json':
-        print(json.dumps(results[0], indent=2))
+        print(json.dumps(results, indent=2))
     else:
         print(generate_report(results, args.format))
 
