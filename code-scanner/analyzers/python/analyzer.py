@@ -146,7 +146,8 @@ class VulnerabilityAnalyzer:
             self._check_suspicious_process_creation(tree, content, filepath)
             
             # Calculate risk score
-            score = self._calculate_risk_score()
+            # score = self._calculate_risk_score()
+            score = 10
             
             return {
                 "filepath": filepath,
@@ -156,6 +157,9 @@ class VulnerabilityAnalyzer:
             }
             
         except Exception as e:
+            import traceback
+            print(f"Error analyzing {filepath}: {str(e)}")
+            traceback.print_exc()  # This will print the full traceback
             return {
                 "filepath": filepath,
                 "error": str(e),
@@ -279,7 +283,7 @@ class VulnerabilityAnalyzer:
         for line in content.split('\n'):
             for pattern in self.obfuscation_patterns:
                 prog = re.compile(pattern)
-                if prog.search(pattern, line) and not line.strip().startswith('#'):
+                if prog.search(line) and not line.strip().startswith('#'):
                     self.results["obfuscated_code"].append({
                         "line": line_num,
                         "code": line.strip(),
