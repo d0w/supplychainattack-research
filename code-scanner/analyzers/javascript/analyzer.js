@@ -7,35 +7,18 @@ const acorn = require('acorn');
 const walk = require('acorn-walk');
 
 // Define vulnerability patterns
-const vulnerabilityPatterns = {
-  hardcoded_credentials: {
-    severity: 9,
-    patterns: [
-      /password\s*[:=]\s*['"](?!.*\$\{)(\w+)['"]/i,
-      /apiKey\s*[:=]\s*['"](?!.*\$\{)(\w+)['"]/i,
-      /secret\s*[:=]\s*['"](?!.*\$\{)(\w+)['"]/i,
-      /token\s*[:=]\s*['"](?!.*\$\{)(\w+)['"]/i
-    ]
-  },
-  command_injection: {
-    severity: 10,
-    patterns: [
-      /exec\(.*\)/,
-      /execSync\(.*\)/,
-      /spawn\(.*\)/,
-      /child_process/,
-      /eval\(/
-    ]
-  },
-  // Add more pattern definitions...
-};
+const filePath = path.join(__dirname, 'vulnerabilityPatterns.json');
+const vulnerabilityPatterns = fs.readFile(filePath, "utf8", (err, data) => {
+  if (err) throw err;
+  return JSON.parse(data);
+})
 
 function analyzeFile(filePath) {
   try {
     const content = fs.readFileSync(filePath, 'utf8');
     const results = {};
     
-    // Pattern-based analysis
+    // regex analysis
     for (const [vulnType, config] of Object.entries(vulnerabilityPatterns)) {
       const occurrences = [];
       
@@ -54,6 +37,7 @@ function analyzeFile(filePath) {
       
       if (occurrences.length > 0) {
         results[vulnType] = occurrences;
+        console.log(`Found ${occurrences.length} occurrences of ${vulnType} in ${filePath}`);
       }
     }
     

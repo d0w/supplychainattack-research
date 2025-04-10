@@ -1,0 +1,94 @@
+{
+    "python": {
+        "backdoor_patterns": [
+        "(socket\\.connect\\(\\(['\"]([\\d\\.]+)['\"],\\s*\\d+\\)\\))",
+        "while\\s+True.*recv\\(.*exec\\(",
+        "exec\\(.*decode\\(.*\\)\\)",
+        "__import__\\(['\"]os['\"]\\)\\.system",
+        "subprocess\\.Popen\\(['\"]bash",
+        "pty\\.spawn\\(['\"]\/bin\/bash['\"]\\)",
+        "crontab\\s+-e",
+        "\\.ssh\\/authorized_keys",
+        "etc\\/passwd",
+        "def\\s+__del__.*os\\.system",
+        "atexit\\.register\\(.*lambda",
+        "signal\\.signal\\(.*lambda.*exec\\("
+        ],
+        "network_patterns": [
+            "\\.connect\\(['\"]([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3})['\"]",
+            "requests\\.(get|post)\\(['\"]https?:\\/\\/([^\\/]+)\\/[^'\"]+['\"]",
+            "urllib\\.(request|parse)\\.urlopen\\(['\"]https?:\\/\\/([^\\/]+)\\/[^'\"]+['\"]",
+            "\\.encode\\(['\"]base64['\"]\\).*\\.(post|get)\\(",
+            "json\\.dumps\\(.*\\).*\\.(post|get)\\(",
+            "\\.read\\(\\).*\\.encode\\(['\"]base64['\"]\\).*\\.(post|get)\\(",
+            "socket\\.gethostbyname\\([^)]+\\)",
+            "dns\\.resolver\\.query\\(",
+            "webhook.*token",
+            "callback.*url"
+        ],
+        "obfuscation_patterns": [
+            "(\\\\x[0-9a-fA-F]{2}){4,}",
+            "chr\\(\\d+\\)\\s*\\+\\s*chr\\(\\d+\\)",
+            "base64\\.(b64decode|b64encode)",
+            "[\"'](%[0-9a-fA-F]{2}){4,}[\"']",
+            "eval\\(.*join\\([\"'],[\"']\\)\\)",
+            "exec\\(.*\\.decode\\(['\"].*['\"]\\)\\)",
+            "exec\\(\"\"\"[^\"]+\"\"\"\\)",
+            "\\\\\\n.*\\\\\\n.*\\\\\\n",
+            "__import__\\([\"'][^\"']+[\"']\\)",
+            "[a-zA-Z0-9_]{1,2}\\s*=\\s*[a-zA-Z0-9_]{1,2}\\[[a-zA-Z0-9_]{1,2}\\];[a-zA-Z0-9_]{1,2}\\s*=\\s*[a-zA-Z0-9_]{1,2}\\[[a-zA-Z0-9_]{1,2}\\]",
+            "for\\s+[a-zA-Z0-9_]{1,2}\\s+in\\s+[a-zA-Z0-9_]{1,2}:\\s*[a-zA-Z0-9_]{1,2}\\+=[a-zA-Z0-9_]{1,2}"
+        ],
+        "password_patterns": [
+            "password\\s*=\\s*[\\\"'](?!.*\\$\\{)(\\w+)[\\\"']",
+            "passwd\\s*=\\s*[\\\"'](?!.*\\$\\{)(\\w+)[\\\"']",
+            "api_key\\s*=\\s*[\\\"'](?!.*\\$\\{)(\\w+)[\\\"']",
+            "secret\\s*=\\s*[\\\"'](?!.*\\$\\{)(\\w+)[\\\"']",
+            "token\\s*=\\s*[\\\"'](?!.*\\$\\{)(\\w+)[\\\"']"
+        ],
+        "unusual_imports": [
+            "socket", "subprocess", "ctypes", "fcntl", "pty", 
+            "tempfile", "urllib.request", "base64", "zlib", "struct", 
+            "marshal", "pickle", "platform", "getpass", "paramiko"
+        ],
+        "sensitive_data_patterns": [
+            "\\/etc\\/shadow", "\\/etc\\/passwd", "\\/etc\\/hosts",
+            "\\.ssh\\/id_rsa", "\\.aws\\/credentials", "\\.env",
+            "database\\.yml", "secrets\\.yml", "credentials\\.json",
+            "read_file\\(['\"]\\\/proc\\/", "\\/dev\\/mem", "\\/var\\/log\\/"
+        ],
+        "suspicious_file_paths": [
+            "/etc/", "/var/", "/home/", "~/", ".ssh/", ".aws/", 
+            "C:\\\\Windows\\\\", "%windir%\\\\", "\\\\Windows\\\\",
+            "\\\\Program Files\\\\", "\\\\Program Files (x86)\\\\",
+            "\\\\System32\\\\", "\\\\SAM", "\\\\NTDS.dit",
+            "\\\\Users\\\\", "%USERPROFILE%\\\\", "\\\\AppData\\\\",
+            "\\\\Credentials\\\\", "\\\\ConsoleHost_history.txt"
+        ],
+        "suspicious_commands": [
+            "sh", "bash", "cmd", "powershell", "/bin/sh", "/bin/bash", 
+            "cmd.exe", "nc ", "netcat", "wget", "curl", 
+            "telnet", "ssh", "ftp", "nmap", "tcpdump"
+        ],
+        "suspicious_network_funcs": {
+            "socket": ["socket", "connect", "bind"],
+            "requests": ["get", "post", "put", "delete"],
+            "urllib.request": ["urlopen"],
+            "http.client": ["HTTPConnection", "HTTPSConnection"],
+            "ftplib": ["FTP"],
+            "telnetlib": ["Telnet"],
+            "smtplib": ["SMTP"]
+        },
+        "sql_injection_patterns": [
+            "SELECT\\s+.*\\s+FROM\\s+.*\\s+WHERE\\s+.*\\s*=\\s*'.*\\{.*\\}.*'",
+            "SELECT\\s+.*\\s+FROM\\s+.*\\s+WHERE\\s+.*\\s*=\\s*\".*\\{.*\\}.*\"",
+            "execute\\([\"'].*\\{.*\\}.*[\"']\\)",
+            "query\\s*=\\s*f[\"']SELECT.*[\"']",
+            "query\\s*=\\s*f[\"']INSERT.*[\"']",
+            "query\\s*=\\s*f[\"']UPDATE.*[\"']",
+            "query\\s*=\\s*f[\"']DELETE.*[\"']"
+        ]                                     
+
+    }
+    
+}

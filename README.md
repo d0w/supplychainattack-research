@@ -65,4 +65,12 @@ Another possible method with static analysis over string matching and AST parsin
 ## 3. Output Results
 After analysis, a report is given with all the vulnerabilities(with their locations, code snippets, and severity), and an overall vulnerability score. This will give the user an informed decision if they wish to proceed with using dependencies or code based on how much they value security. This will also alert users to sudden changes in security if they installed poisoned dependencies, which could help mitigate the effects of a supply chain attack.
 
+The risk score is calculated as follows
+
+```math
+\text{Risk Score} = \min\left(\max_{v \in V} \left( severity_v + log_{10}(count_v) \right), 10\right)
+```
+
+This is essentially finding the max severity vulnerability. Vulnerabilities with many repeats will be weighted higher with diminishing returns.
+
 
