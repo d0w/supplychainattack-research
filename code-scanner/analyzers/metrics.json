@@ -16,7 +16,7 @@
         "description": "Possible SQL injection vulnerability"
     },
     "path_traversal": {
-        "severity": 7,
+        "severity": 2,
         "description": "Path traversal vulnerability"
     },
     "insecure_ssl": {
@@ -44,11 +44,11 @@
         "description": "Potential backdoor or malicious code"
     },
     "suspicious_network_activity": {
-        "severity": 9,
+        "severity": 6,
         "description": "Suspicious network calls or data exfiltration attempts"
     },
     "obfuscated_code": {
-        "severity": 8,
+        "severity": 4,
         "description": "Obfuscated or encoded code that might hide malicious intent"
     },
     "unauthorized_data_access": {

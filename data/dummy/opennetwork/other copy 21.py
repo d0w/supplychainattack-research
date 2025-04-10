@@ -68,7 +68,7 @@ class VulnerabilityAnalyzer:
                 "language": "python",
                 "vulnerabilities": all_vulnerabilities, # flatten the list of vulnerabilities
                 "risk_score": score,
-                "risk_level": self.get_risk_level(score)
+                # "risk_level": self.get_risk_level(score)
             }
             
         except Exception as e:
@@ -581,7 +581,7 @@ class VulnerabilityAnalyzer:
             severity = self.vulnerability_patterns.get(vuln_type, {}).get("severity", 0)
             
             # apply weight if repeats
-            severity += math.log10(len(occurrences)) * 0.5
+            severity += 1 + len(occurrences) * 0.2
 
             max_severity = max(max_severity, severity)
 
