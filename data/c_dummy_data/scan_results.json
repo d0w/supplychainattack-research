@@ -1,0 +1,5891 @@
+Found 5 C/C++ files to analyze
+Analyzing ./secure_messenger/main.c...
+Analyzing ./malicious_lib/crypto_utils.c...
+Analyzing ./malicious_lib/net_utils.h...
+Analyzing ./malicious_lib/net_utils.c...
+Analyzing ./malicious_lib/crypto_utils.h...
+[
+  {
+    "filepath": "./secure_messenger/main.c",
+    "risk_score": 10.0,
+    "risk_level": "Critical",
+    "vulnerabilities": {
+      "obfuscated_code": [
+        {
+          "line": 5,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 6,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 7,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 8,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 9,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 10,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 11,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 12,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 13,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 14,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 15,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 16,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 17,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 18,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 19,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 20,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 22,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 23,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 24,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 25,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 26,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 27,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 29,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 30,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 31,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 32,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 33,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 34,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 35,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 36,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 37,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 38,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 39,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 40,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 41,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 42,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 43,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 44,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 45,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 46,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 47,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 48,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 49,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 50,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 51,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 52,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 53,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 54,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 55,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 56,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 57,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 58,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 59,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 60,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 61,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 62,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 63,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 64,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 65,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 66,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 67,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 68,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 69,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 70,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 71,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 72,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 73,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 74,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 75,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 76,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 77,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 78,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 79,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 80,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 81,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 82,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 83,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 84,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 85,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 86,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 87,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 88,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 89,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 90,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 91,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 92,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 93,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 94,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 95,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 96,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 97,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 98,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 99,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 100,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 101,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 102,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 103,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 104,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 105,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 106,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 107,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 108,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 109,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 110,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 111,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 112,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 113,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 114,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 115,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 116,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 117,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 118,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 119,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 121,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 122,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 123,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 124,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 125,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 126,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 127,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 128,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 129,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 130,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 131,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 132,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 133,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 134,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 135,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 136,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 137,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 138,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 139,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 140,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 141,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 142,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 143,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 144,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 145,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 146,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 147,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 149,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 150,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 151,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 152,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 153,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 155,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 156,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 157,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 158,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 159,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 160,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 161,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 162,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 163,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 164,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 165,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 166,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 167,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 168,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 169,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 170,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 171,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 172,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 173,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 174,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 175,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 176,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 177,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 178,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 179,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 180,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 181,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 182,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 183,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 184,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 185,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 186,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 187,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 188,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 189,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 191,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 192,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 193,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 194,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 195,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 196,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 197,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 198,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 199,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 200,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 201,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 202,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 203,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 204,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 205,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 206,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 207,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 208,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 209,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 210,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 211,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 212,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 213,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 214,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 215,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 216,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 217,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 218,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 219,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 220,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 221,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 222,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 223,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 224,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 225,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 226,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 227,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 228,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 229,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 230,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 231,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 232,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 233,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 234,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 235,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 236,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 237,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 238,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 239,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 240,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 241,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 243,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 244,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 245,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 246,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 247,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 248,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 249,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 250,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 251,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 252,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 253,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 254,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 255,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 256,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 257,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 258,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 259,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 260,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 261,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 262,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 263,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 264,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 265,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 266,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 267,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 268,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 269,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 270,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 271,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 272,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 273,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 274,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 275,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 276,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 277,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 278,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 279,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 280,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 281,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 282,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 283,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 284,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 285,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 286,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 287,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 288,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 289,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 290,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 291,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 292,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 293,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 294,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 295,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 296,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 297,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 299,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 300,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 301,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 302,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 303,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 304,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 305,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 306,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 307,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 308,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 309,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 310,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 311,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 312,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 313,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 314,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 315,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 316,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 317,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 318,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 319,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 320,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 321,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 322,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 323,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 324,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 325,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 326,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 327,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 328,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 329,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 330,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 331,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 332,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 333,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 334,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 335,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 336,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 337,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 338,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 339,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 340,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 341,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 342,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 343,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 344,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 345,
+          "code": "",
+          "file": "./secure_messenger/main.c",
+          "description": "XOR-based obfuscation"
+        }
+      ]
+    }
+  },
+  {
+    "filepath": "./malicious_lib/crypto_utils.c",
+    "risk_score": 10.0,
+    "risk_level": "Critical",
+    "vulnerabilities": {
+      "obfuscated_code": [
+        {
+          "line": 6,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 7,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 8,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 9,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 10,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 11,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 12,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 13,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 14,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 15,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 16,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 17,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 19,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 20,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 21,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 22,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 23,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 25,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 26,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 27,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 29,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 30,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 31,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 32,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 33,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 34,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 35,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 36,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 37,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 38,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 39,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 40,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 41,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 42,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 43,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 44,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 45,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 46,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 47,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 48,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 49,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 50,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 51,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 52,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 53,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 54,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 55,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 57,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 58,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 59,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 60,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 61,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 62,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 63,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 64,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 65,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 66,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 67,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 68,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 69,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 70,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 71,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 72,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 73,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 74,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 75,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 78,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 79,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 80,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 81,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 82,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 83,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 84,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 85,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 86,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 87,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 88,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 89,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 90,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 91,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 92,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 93,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 94,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 95,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 96,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 97,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 98,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 99,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 100,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 101,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 102,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 103,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 104,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 107,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 108,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 109,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 110,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 111,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 112,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 113,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 114,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 115,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 116,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 117,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 118,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 119,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 120,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 121,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 122,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 123,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 124,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 125,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 126,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 127,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 128,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 129,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 130,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 131,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 133,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 134,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 135,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 136,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 137,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 140,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 141,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 142,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 143,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 144,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 145,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 146,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 147,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 148,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 149,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 150,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 153,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 154,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 155,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 156,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 157,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 158,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 159,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 160,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 161,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 162,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 163,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 164,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 165,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 166,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 167,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 168,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 169,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 170,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 171,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 172,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 173,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 174,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 175,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 176,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 177,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 178,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 180,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 181,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 182,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 183,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 184,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 185,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 186,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 187,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 188,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 189,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 190,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 191,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 192,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 193,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 194,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 195,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 196,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 197,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 198,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 199,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 200,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 201,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 202,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 203,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 204,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 205,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 206,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 207,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 208,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 209,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 210,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 211,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 212,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 213,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 214,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 215,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 216,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 217,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 218,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 219,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 220,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 221,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 222,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 223,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 224,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 225,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 226,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 227,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 228,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 229,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 230,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 231,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 232,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 233,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 234,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 235,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 236,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 237,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 238,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 239,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 240,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 241,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 242,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 243,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 244,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 245,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 246,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 247,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 248,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 249,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 250,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 251,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 252,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 253,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 255,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 256,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 257,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 258,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 259,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 260,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 261,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 262,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 263,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 264,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 265,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 266,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 267,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 268,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.c",
+          "description": "XOR-based obfuscation"
+        }
+      ]
+    }
+  },
+  {
+    "filepath": "./malicious_lib/net_utils.h",
+    "risk_score": 10.0,
+    "risk_level": "Critical",
+    "vulnerabilities": {
+      "obfuscated_code": [
+        {
+          "line": 5,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 6,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 7,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 8,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 9,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 10,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 18,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 19,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 24,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 25,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 37,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 38,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 50,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 51,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 62,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 63,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 74,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 75,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 87,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 88,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 100,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 101,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 113,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 114,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 121,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 122,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 133,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 134,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 147,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 148,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 149,
+          "code": "",
+          "file": "./malicious_lib/net_utils.h",
+          "description": "XOR-based obfuscation"
+        }
+      ]
+    }
+  },
+  {
+    "filepath": "./malicious_lib/net_utils.c",
+    "risk_score": 10.0,
+    "risk_level": "Critical",
+    "vulnerabilities": {
+      "obfuscated_code": [
+        {
+          "line": 5,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 6,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 7,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 8,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 9,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 10,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 11,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 12,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 13,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 14,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 15,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 16,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 17,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 18,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 19,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 20,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 22,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 23,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 24,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 25,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 27,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 28,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 29,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 31,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 32,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 33,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 34,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 35,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 37,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 38,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 39,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 40,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 41,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 42,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 43,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 44,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 45,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 46,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 47,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 48,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 49,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 50,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 51,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 52,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 53,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 54,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 55,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 56,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 57,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 58,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 59,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 60,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 61,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 62,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 63,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 64,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 65,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 66,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 67,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 68,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 69,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 70,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 71,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 72,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 73,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 74,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 76,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 77,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 78,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 79,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 80,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 81,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 82,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 83,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 84,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 85,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 86,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 87,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 88,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 89,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 90,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 91,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 92,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 93,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 94,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 95,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 96,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 97,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 98,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 99,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 100,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 101,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 102,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 103,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 104,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 105,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 106,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 107,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 109,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 110,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 111,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 112,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 113,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 114,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 115,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 116,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 117,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 118,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 119,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 120,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 121,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 122,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 123,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 124,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 125,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 126,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 127,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 129,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 130,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 131,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 132,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 133,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 134,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 135,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 136,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 137,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 138,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 139,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 140,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 141,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 142,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 144,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 145,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 146,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 147,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 148,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 150,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 151,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 152,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 153,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 154,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 155,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 156,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 157,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 158,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 159,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 160,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 161,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 162,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 163,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 164,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 165,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 166,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 167,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 168,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 169,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 170,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 171,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 172,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 173,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 174,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 175,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 176,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 177,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 178,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 179,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 180,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 181,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 182,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 183,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 184,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 186,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 187,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 188,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 189,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 190,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 191,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 192,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 193,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 194,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 195,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 196,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 197,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 198,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 199,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 200,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 201,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 202,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 203,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 204,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 205,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 206,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 208,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 209,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 210,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 211,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 213,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 214,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 215,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 216,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 217,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 218,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 219,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 220,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 221,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 222,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 223,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 224,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 225,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 226,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 227,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 228,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 229,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 230,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 231,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 232,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 233,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 234,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 235,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 236,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 237,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 238,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 239,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 240,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 241,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 243,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 244,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 245,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 246,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 248,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 249,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 250,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 251,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 253,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 254,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 255,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 256,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 258,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 259,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 260,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 261,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 262,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 263,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 264,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 265,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 266,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 267,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 268,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 269,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 270,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 271,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 272,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 274,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 275,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 276,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 277,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 278,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 279,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 280,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 281,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 282,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 283,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 284,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 285,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 286,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 287,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 288,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 289,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 290,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 291,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 292,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 293,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 294,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 295,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 296,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 297,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 298,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 299,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 301,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 302,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 303,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 304,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 305,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 306,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 307,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 308,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 309,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 310,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 311,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 312,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 313,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 314,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 315,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 317,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 318,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 319,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 320,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 321,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 322,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 323,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 324,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 325,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 326,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 327,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 328,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 329,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 330,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 331,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 332,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 333,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 334,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 335,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 336,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 337,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 338,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 339,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 340,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 341,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 342,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 343,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 344,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 345,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 346,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 347,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 348,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 349,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 350,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 351,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 352,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 353,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 354,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 355,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 356,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 357,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 358,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 359,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 360,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 361,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 362,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 363,
+          "code": "",
+          "file": "./malicious_lib/net_utils.c",
+          "description": "XOR-based obfuscation"
+        }
+      ]
+    }
+  },
+  {
+    "filepath": "./malicious_lib/crypto_utils.h",
+    "risk_score": 10.0,
+    "risk_level": "Critical",
+    "vulnerabilities": {
+      "obfuscated_code": [
+        {
+          "line": 5,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 6,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 7,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 8,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 9,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 10,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 18,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 19,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 24,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 25,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 36,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 37,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 51,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 52,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 66,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 67,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 80,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 81,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 93,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 94,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        },
+        {
+          "line": 95,
+          "code": "",
+          "file": "./malicious_lib/crypto_utils.h",
+          "description": "XOR-based obfuscation"
+        }
+      ]
+    }
+  }
+]

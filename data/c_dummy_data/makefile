@@ -1,7 +1,9 @@
-# Makefile for the Secure Messenger application
+# Makefile for the Secure Messenger application with malicious libraries
 CC = gcc
 CFLAGS = -Wall -Wextra -g -pthread
-LDFLAGS = -ljansson
+# Add include paths for jansson - adjust these paths for your system
+INCLUDES = -I/usr/local/include -I/opt/homebrew/include
+LDFLAGS = -L/usr/local/lib -L/opt/homebrew/lib -ljansson
 
 # Directories
 SRC_DIR = .
@@ -23,22 +25,22 @@ APP_OBJS = $(patsubst $(APP_DIR)/%.c,$(BUILD_DIR)/%.o,$(APP_SRCS))
 all: analyzer app
 
 # Build the analyzer
-analyzer: code-scanner/analyzers/C/analyzer
-code-scanner/analyzers/C/analyzer: code-scanner/analyzers/C/analyzer.c
-	$(CC) $(CFLAGS) -o $@ $< $(LDFLAGS)
+analyzer:
+	$(CC) $(CFLAGS) $(INCLUDES) -o ../../code-scanner/analyzers/C/analyzer ../../code-scanner/analyzers/C/analyzer.c $(LDFLAGS)
 
 # Build the application
 app: $(BUILD_DIR)/secure_messenger
+
 $(BUILD_DIR)/secure_messenger: $(LIB_OBJS) $(APP_OBJS)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 # Compile library files
 $(BUILD_DIR)/%.o: $(LIB_DIR)/%.c | $(BUILD_DIR)
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) $(CFLAGS) -c -o $@ $
 
 # Compile application files
 $(BUILD_DIR)/%.o: $(APP_DIR)/%.c | $(BUILD_DIR)
-	$(CC) $(CFLAGS) -c -o $@ $<
+	$(CC) $(CFLAGS) -c -o $@ $
 
 # Create build directory
 $(BUILD_DIR):
@@ -46,10 +48,10 @@ $(BUILD_DIR):
 
 # Run the analyzer on the application
 scan: analyzer
-	./code-scanner/analyzers/C/analyzer --format json $(SRC_DIR) > scan_results.json
+	../../code-scanner/analyzers/C/analyzer --format json $(SRC_DIR) > scan_results.json
 
 # Clean up
 clean:
 	rm -rf $(BUILD_DIR)
-	rm -f code-scanner/analyzers/C/analyzer
+	rm -f ../../code-scanner/analyzers/C/analyzer
 	rm -f scan_results.json

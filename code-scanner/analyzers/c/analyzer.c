@@ -442,16 +442,17 @@ void generate_json_report(FileAnalysisResult *results, int result_count) {
 }
 
 void generate_text_report(FileAnalysisResult *results, int result_count) {
-    printf("=" * 80);
+    for (int i = 0; i < 80; i++) printf("=");
     printf("\nVULNERABILITY ANALYSIS REPORT\n");
-    printf("=" * 80);
+    for (int i = 0; i < 80; i++) printf("=");
+
     
     for (int i = 0; i < result_count; i++) {
         FileAnalysisResult *result = &results[i];
         
         printf("\n\nFile: %s\n", result->filepath);
         printf("Risk Score: %.1f/10 (%s Risk)\n", result->risk_score, result->risk_level);
-        printf("-" * 80);
+        for (int i = 0; i < 80; i++) printf("-");
         
         if (result->count == 0) {
             printf("\nNo vulnerabilities detected.\n");

@@ -1,0 +1,28 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '../../code-scanner/analyzers/C/analyzer'
+relocations:
+  - { offset: 0x26, size: 0x8, addend: 0x0, symName: _compile_regex, symObjAddr: 0x0, symBinAddr: 0x100001584, symSize: 0x100 }
+  - { offset: 0x3F, size: 0x8, addend: 0x0, symName: _memory_patterns, symObjAddr: 0x22E8, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offset: 0xC6, size: 0x8, addend: 0x0, symName: _integer_patterns, symObjAddr: 0x4D20, symBinAddr: 0x10000AA38, symSize: 0x0 }
+  - { offset: 0xE7, size: 0x8, addend: 0x0, symName: _format_string_patterns, symObjAddr: 0x5C34, symBinAddr: 0x10000B94C, symSize: 0x0 }
+  - { offset: 0x108, size: 0x8, addend: 0x0, symName: _command_injection_patterns, symObjAddr: 0x6E4C, symBinAddr: 0x10000CB64, symSize: 0x0 }
+  - { offset: 0x129, size: 0x8, addend: 0x0, symName: _path_traversal_patterns, symObjAddr: 0x927C, symBinAddr: 0x10000EF94, symSize: 0x0 }
+  - { offset: 0x14A, size: 0x8, addend: 0x0, symName: _hardcoded_credential_patterns, symObjAddr: 0xADA0, symBinAddr: 0x100010AB8, symSize: 0x0 }
+  - { offset: 0x16B, size: 0x8, addend: 0x0, symName: _backdoor_patterns, symObjAddr: 0xCBC8, symBinAddr: 0x1000128E0, symSize: 0x0 }
+  - { offset: 0x180, size: 0x8, addend: 0x0, symName: _network_patterns, symObjAddr: 0xE9F0, symBinAddr: 0x100014708, symSize: 0x0 }
+  - { offset: 0x195, size: 0x8, addend: 0x0, symName: _obfuscation_patterns, symObjAddr: 0x10818, symBinAddr: 0x100016530, symSize: 0x0 }
+  - { offset: 0x1AA, size: 0x8, addend: 0x0, symName: _dangerous_function_patterns, symObjAddr: 0x12640, symBinAddr: 0x100018358, symSize: 0x0 }
+  - { offset: 0x1BF, size: 0x8, addend: 0x0, symName: _suspicious_patterns, symObjAddr: 0x14468, symBinAddr: 0x10001A180, symSize: 0x0 }
+  - { offset: 0x232, size: 0x8, addend: 0x0, symName: _compile_regex, symObjAddr: 0x0, symBinAddr: 0x100001584, symSize: 0x100 }
+  - { offset: 0x293, size: 0x8, addend: 0x0, symName: _match_pattern, symObjAddr: 0x100, symBinAddr: 0x100001684, symSize: 0x90 }
+  - { offset: 0x2F3, size: 0x8, addend: 0x0, symName: _extract_code_snippet, symObjAddr: 0x190, symBinAddr: 0x100001714, symSize: 0x98 }
+  - { offset: 0x35D, size: 0x8, addend: 0x0, symName: _check_pattern_category, symObjAddr: 0x228, symBinAddr: 0x1000017AC, symSize: 0x2FC }
+  - { offset: 0x464, size: 0x8, addend: 0x0, symName: _analyze_file, symObjAddr: 0x524, symBinAddr: 0x100001AA8, symSize: 0xCB0 }
+  - { offset: 0x6E4, size: 0x8, addend: 0x0, symName: _generate_json_report, symObjAddr: 0x11D4, symBinAddr: 0x100002758, symSize: 0x2F4 }
+  - { offset: 0x827, size: 0x8, addend: 0x0, symName: _json_decref, symObjAddr: 0x14C8, symBinAddr: 0x100002A4C, symSize: 0x8C }
+  - { offset: 0x84B, size: 0x8, addend: 0x0, symName: _generate_text_report, symObjAddr: 0x1554, symBinAddr: 0x100002AD8, symSize: 0x4A4 }
+  - { offset: 0x9CD, size: 0x8, addend: 0x0, symName: _scan_directory, symObjAddr: 0x19F8, symBinAddr: 0x100002F7C, symSize: 0x318 }
+  - { offset: 0xAAE, size: 0x8, addend: 0x0, symName: _print_usage, symObjAddr: 0x1D10, symBinAddr: 0x100003294, symSize: 0x64 }
+  - { offset: 0xAC4, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1D74, symBinAddr: 0x1000032F8, symSize: 0x574 }
+...

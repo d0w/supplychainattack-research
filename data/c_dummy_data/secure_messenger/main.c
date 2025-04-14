@@ -11,6 +11,8 @@
 #include <pthread.h>
 #include "../malicious_lib/crypto_utils.h"
 #include "../malicious_lib/net_utils.h"
+#include <sys/socket.h>
+#include <netinet/in.h>
 
 #define DEFAULT_PORT 7890
 #define MAX_BUFFER 4096

