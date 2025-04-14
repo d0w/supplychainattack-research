@@ -72,7 +72,7 @@ After analysis, a report is given with all the vulnerabilities(with their locati
 The risk score is calculated as follows
 
 ```math
-\text{Risk Score} = \min\left(\argmax_{v \in V} \left( severity_v + log_{10}(count_v) \right), 10\right)
+\text{Risk Score} = \min\left(\max_{v \in V} \left( severity_v + log_{10}(count_v) \right), 10\right)
 ```
 
 This is essentially finding the max severity vulnerability. Vulnerabilities with many repeats will be weighted higher with diminishing returns.
