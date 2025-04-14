@@ -1,18 +1,18 @@
 {
     "python": {
         "backdoor_patterns": [
-        "(socket\\.connect\\(\\(['\"]([\\d\\.]+)['\"],\\s*\\d+\\)\\))",
-        "while\\s+True.*recv\\(.*exec\\(",
-        "exec\\(.*decode\\(.*\\)\\)",
-        "__import__\\(['\"]os['\"]\\)\\.system",
-        "subprocess\\.Popen\\(['\"]bash",
-        "pty\\.spawn\\(['\"]\/bin\/bash['\"]\\)",
-        "crontab\\s+-e",
-        "\\.ssh\\/authorized_keys",
-        "etc\\/passwd",
-        "def\\s+__del__.*os\\.system",
-        "atexit\\.register\\(.*lambda",
-        "signal\\.signal\\(.*lambda.*exec\\("
+            "(socket\\.connect\\(\\(['\"]([\\d\\.]+)['\"],\\s*\\d+\\)\\))",
+            "while\\s+True.*recv\\(.*exec\\(",
+            "exec\\(.*decode\\(.*\\)\\)",
+            "__import__\\(['\"]os['\"]\\)\\.system",
+            "subprocess\\.Popen\\(['\"]bash",
+            "pty\\.spawn\\(['\"]\/bin\/bash['\"]\\)",
+            "crontab\\s+-e",
+            "\\.ssh\\/authorized_keys",
+            "etc\\/passwd",
+            "def\\s+__del__.*os\\.system",
+            "atexit\\.register\\(.*lambda",
+            "signal\\.signal\\(.*lambda.*exec\\("
         ],
         "network_patterns": [
             "\\.connect\\(['\"]([0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3})['\"]",
@@ -89,6 +89,139 @@
             "query\\s*=\\s*f[\"']DELETE.*[\"']"
         ]                                     
 
+    },
+
+    "javascript": {
+        "backdoor_patterns": [
+            "require\\(['\"]child_process['\"]\\)\\.exec\\(['\"][^'\"]+['\"]\\)",
+            "require\\(['\"]child_process['\"]\\)\\.spawn\\(['\"][^'\"]+['\"]\\)",
+            "require\\(['\"]net['\"]\\)\\.connect\\(\\d+,\\s*['\"][\\d\\.]+['\"]\\)",
+            "require\\(['\"]net['\"]\\)\\.createServer\\([^)]+\\)\\.listen\\(\\d+\\)",
+            "new\\s+WebSocket\\(['\"]ws://[^'\"]+['\"]\\)",
+            "\\.setInterval\\(.*eval\\(",
+            "\\.setTimeout\\(.*eval\\(",
+            "\\.on\\(['\"]message['\"],.*eval\\(",
+            "process\\.binding\\(['\"]spawn_sync['\"]\\)",
+            "process\\.mainModule\\.require",
+            "process\\.env\\[['\"][^'\"]+['\"]\\]\\s*=\\s*['\"][^'\"]+['\"]",
+            "fs\\.appendFileSync\\(['\"]\\.\\.?/.ssh/authorized_keys['\"]"
+        ],
+        "network_patterns": [
+            "new\\s+WebSocket\\(['\"]ws[s]?://[^'\"]+['\"]\\)",
+            "\\$\\.ajax\\(\\{[^}]*url:\\s*['\"][^'\"]+['\"]",
+            "fetch\\(['\"]https?://[^'\"]+['\"]\\)",
+            "require\\(['\"]http[s]?['\"]\\)\\.request\\(",
+            "require\\(['\"]http[s]?['\"]\\)\\.get\\(",
+            "require\\(['\"]axios['\"]\\)\\.(get|post|put|delete)\\(",
+            "new\\s+XMLHttpRequest\\(\\)",
+            "\\.setRequestHeader\\(['\"]Authorization['\"],\\s*['\"]Bearer\\s+[^'\"]+['\"]\\)",
+            "require\\(['\"]dns['\"]\\)\\.lookup\\(",
+            "require\\(['\"]net['\"]\\)\\.connect\\(",
+            "\\.emit\\(['\"]data['\"],\\s*(btoa|Buffer\\.from)\\("
+        ],
+        "obfuscation_patterns": [
+            "(\\\\x[0-9a-fA-F]{2}){4,}",
+            "(\\\\u[0-9a-fA-F]{4}){4,}",
+            "String\\.fromCharCode\\(\\d+(?:\\s*,\\s*\\d+)+\\)",
+            "atob\\(['\"][^'\"]+['\"]\\)",
+            "btoa\\(['\"][^'\"]+['\"]\\)",
+            "eval\\(['\"][^'\"]+['\"]\\)",
+            "eval\\(atob\\(['\"][^'\"]+['\"]\\)\\)",
+            "eval\\([^;]+\\.join\\(['\"]['\"]\\)\\)",
+            "Function\\(['\"][^'\"]+['\"]\\)\\(\\)",
+            "[a-zA-Z0-9_$]{1,3}\\[[a-zA-Z0-9_$]{1,3}\\]\\[[a-zA-Z0-9_$]{1,3}\\]",
+            "[a-zA-Z0-9_$]{1,3}=~[a-zA-Z0-9_$]{1,3};",
+            "\\[[^\\]]+\\]\\.constructor\\(['\"]return this['\"]\\)\\(\\)",
+            "(?:\\.replace\\(/[^/]+/g,[^)]+\\)\\s*){3,}",
+            "Array\\(\\d+\\)\\.join\\(['\"][^'\"]*['\"]\\)"
+        ],
+        "password_patterns": [
+            "password\\s*[=:]\\s*['\"][^'\"]+['\"]",
+            "passwd\\s*[=:]\\s*['\"][^'\"]+['\"]",
+            "pwd\\s*[=:]\\s*['\"][^'\"]+['\"]",
+            "secret\\s*[=:]\\s*['\"][^'\"]+['\"]",
+            "apiKey\\s*[=:]\\s*['\"][^'\"]+['\"]",
+            "api_key\\s*[=:]\\s*['\"][^'\"]+['\"]",
+            "authToken\\s*[=:]\\s*['\"][^'\"]+['\"]",
+            "auth_token\\s*[=:]\\s*['\"][^'\"]+['\"]",
+            "credentials\\s*[=:]\\s*['\"][^'\"]+['\"]",
+            "accessKey\\s*[=:]\\s*['\"][^'\"]+['\"]"
+        ],
+        "unusual_imports": [
+            "child_process", "crypto", "fs", "net", "dgram", "os", "process", 
+            "cluster", "v8", "vm", "worker_threads", "perf_hooks", "dns", 
+            "tls", "http", "https", "querystring", "punycode", "inspector", 
+            "module", "buffer"
+        ],
+        "sensitive_data_patterns": [
+            "process\\.env\\.[A-Z_]+",
+            "require\\(['\"]dotenv['\"]\\)\\.config\\(\\)",
+            "fs\\.readFile(Sync)?\\(['\"]\\.[^'\"]+\\.env['\"]",
+            "fs\\.readFile(Sync)?\\(['\"][^'\"]*config[^'\"]*\\.json['\"]",
+            "fs\\.readFile(Sync)?\\(['\"][^'\"]*credentials[^'\"]*['\"]",
+            "fs\\.readFile(Sync)?\\(['\"][^'\"]*key[^'\"]*\\.pem['\"]",
+            "fs\\.readFile(Sync)?\\(['\"][^'\"]*id_rsa['\"]",
+            "localStorage\\.getItem\\(['\"]token['\"]\\)",
+            "localStorage\\.getItem\\(['\"]credentials['\"]\\)",
+            "sessionStorage\\.getItem\\(['\"]token['\"]\\)",
+            "document\\.cookie"
+        ],
+        "suspicious_file_paths": [
+            "/etc/", "/var/", "/home/", "~/", ".ssh/", ".aws/", 
+            "C:\\\\Windows\\\\", "%windir%\\\\", "\\\\Windows\\\\",
+            "\\\\Program Files\\\\", "\\\\Program Files (x86)\\\\",
+            "\\\\System32\\\\", "\\\\SAM", "\\\\NTDS.dit",
+            "\\\\Users\\\\", "%USERPROFILE%\\\\", "\\\\AppData\\\\",
+            "\\\\Credentials\\\\", "\\\\ConsoleHost_history.txt",
+            "package.json", "node_modules", ".npmrc", ".yarnrc"
+        ],
+        "suspicious_commands": [
+            "sh", "bash", "cmd", "powershell", "/bin/sh", "/bin/bash", 
+            "cmd.exe", "nc ", "netcat", "wget", "curl", 
+            "telnet", "ssh", "ftp", "nmap", "tcpdump", "npm install",
+            "npm publish", "npm run", "yarn add", "yarn publish"
+        ],
+        "suspicious_network_funcs": {
+            "http": ["request", "get", "createServer"],
+            "https": ["request", "get", "createServer"],
+            "net": ["createServer", "connect", "createConnection"],
+            "dns": ["lookup", "resolve", "resolve4", "resolve6"],
+            "axios": ["get", "post", "put", "delete"],
+            "fetch": ["fetch"],
+            "XMLHttpRequest": ["open", "send"]
+        },
+        "sql_injection_patterns": [
+            "db\\.query\\(['\"]SELECT[^'\"]+\\$\\{[^}]+\\}[^'\"]*['\"]",
+            "db\\.query\\(['\"]INSERT[^'\"]+\\$\\{[^}]+\\}[^'\"]*['\"]",
+            "db\\.query\\(['\"]UPDATE[^'\"]+\\$\\{[^}]+\\}[^'\"]*['\"]",
+            "db\\.query\\(['\"]DELETE[^'\"]+\\$\\{[^}]+\\}[^'\"]*['\"]",
+            "connection\\.query\\(['\"][^'\"]*\\$\\{[^}]+\\}[^'\"]*['\"]",
+            "exec\\(['\"]SELECT[^'\"]+\\$\\{[^}]+\\}[^'\"]*['\"]",
+            "sequelize\\.query\\(['\"][^'\"]*\\$\\{[^}]+\\}[^'\"]*['\"]",
+            "knex\\.raw\\(['\"][^'\"]*\\$\\{[^}]+\\}[^'\"]*['\"]"
+        ],
+        "dom_xss_patterns": [
+            "\\.innerHTML\\s*=\\s*[^;]*\\$\\{[^}]+\\}",
+            "\\.outerHTML\\s*=\\s*[^;]*\\$\\{[^}]+\\}",
+            "document\\.write\\([^)]*\\$\\{[^}]+\\}[^)]*\\)",
+            "document\\.writeln\\([^)]*\\$\\{[^}]+\\}[^)]*\\)",
+            "\\.insertAdjacentHTML\\([^)]*\\$\\{[^}]+\\}[^)]*\\)",
+            "eval\\([^)]*\\$\\{[^}]+\\}[^)]*\\)",
+            "setTimeout\\(['\"][^'\"]*\\$\\{[^}]+\\}[^'\"]*['\"]",
+            "setInterval\\(['\"][^'\"]*\\$\\{[^}]+\\}[^'\"]*['\"]",
+            "new\\s+Function\\([^)]*\\$\\{[^}]+\\}[^)]*\\)"
+        ],
+        "prototype_pollution_patterns": [
+            "Object\\.assign\\([^,]+,\\s*[^)]+\\)",
+            "\\.\\$extend\\([^,]+,\\s*[^)]+\\)",
+            "\\.merge\\([^,]+,\\s*[^)]+\\)",
+            "\\[['\"](prototype|constructor|__proto__)['\"]\\]\\s*=",
+            "\\.__proto__\\s*=",
+            "\\.prototype\\s*=",
+            "Object\\.setPrototypeOf\\(",
+            "lodash\\.merge\\(",
+            "\\$\\.extend\\("
+        ]
     }
     
 }
