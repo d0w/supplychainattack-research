@@ -42,7 +42,7 @@ func (s *Scanner) ScanFile(filePath string) (*models.FileResult, error) {
 			RiskLevel:       models.RiskLevelLow,
 		}, nil
 	}
-    
+
 	// get appropriate analyzer script
 	analyzer, ok := s.AnalyzerRegistry.GetAnalyzer(language)
 	if !ok {
@@ -105,23 +105,17 @@ func (s *Scanner) ScanDirectory(rootDir string) (*models.ScanResult, []error, er
 
 	// collect results
 	var fileResults []models.FileResult
-	var totalScore float64
+	var overallScore float64
 	var totalIssues int
 	var filesWithIssues int
 
 	for result := range resultsChan {
 		fileResults = append(fileResults, *result)
-		totalScore += result.RiskScore
 		totalIssues += len(result.Vulnerabilities)
 		if len(result.Vulnerabilities) > 0 {
 			filesWithIssues++
 		}
-	}
-
-	// calculate overall score by averaging risk scores of files
-	var overallScore float64
-	if len(fileResults) > 0 {
-		overallScore = totalScore / float64(len(fileResults))
+		overallScore = max(overallScore, result.RiskScore)
 	}
 
 	// Create final result

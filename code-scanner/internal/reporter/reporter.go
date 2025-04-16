@@ -44,17 +44,6 @@ func (r *Reporter) ReportText(result *models.ScanResult, detailed bool) error {
 		return sortedFiles[i].RiskScore > sortedFiles[j].RiskScore
 	})
 
-	// Overall summary
-	fmt.Fprintln(w, "===== Security Scan Summary =====")
-	fmt.Fprintf(w, "Files Scanned:\t%d\n", result.TotalFiles)
-	fmt.Fprintf(w, "Files With Issues:\t%d\n", result.FilesWithIssues)
-	fmt.Fprintf(w, "Total Issues:\t%d\n", result.TotalIssues)
-
-	// Color-coded overall risk
-	overallRiskColor := colorForRiskLevel(result.OverallLevel)
-	fmt.Fprintf(w, "Overall Risk:\t%s (%.1f)\n\n",
-		overallRiskColor(result.OverallLevel), result.OverallScore)
-
 	// List vulnerable files
 	if result.FilesWithIssues > 0 {
 		fmt.Fprintln(w, "===== Vulnerable Files =====")
@@ -75,6 +64,17 @@ func (r *Reporter) ReportText(result *models.ScanResult, detailed bool) error {
 
 		// if detailed is not true, return here
 		if !detailed {
+
+			// Overall summary
+			fmt.Fprintln(w, "===== Security Scan Summary =====")
+			fmt.Fprintf(w, "Files Scanned:\t%d\n", result.TotalFiles)
+			fmt.Fprintf(w, "Files With Issues:\t%d\n", result.FilesWithIssues)
+			fmt.Fprintf(w, "Total Issues:\t%d\n", result.TotalIssues)
+
+			// Color-coded overall risk
+			overallRiskColor := colorForRiskLevel(result.OverallLevel)
+			fmt.Fprintf(w, "Overall Risk:\t%s (%.1f)\n\n",
+				overallRiskColor(result.OverallLevel), result.OverallScore)
 			return w.Flush()
 		}
 
@@ -116,6 +116,17 @@ func (r *Reporter) ReportText(result *models.ScanResult, detailed bool) error {
 	} else {
 		fmt.Fprintln(w, "No vulnerabilities detected.")
 	}
+
+	// Overall summary
+	fmt.Fprintln(w, "===== Security Scan Summary =====")
+	fmt.Fprintf(w, "Files Scanned:\t%d\n", result.TotalFiles)
+	fmt.Fprintf(w, "Files With Issues:\t%d\n", result.FilesWithIssues)
+	fmt.Fprintf(w, "Total Issues:\t%d\n", result.TotalIssues)
+
+	// Color-coded overall risk
+	overallRiskColor := colorForRiskLevel(result.OverallLevel)
+	fmt.Fprintf(w, "Overall Risk:\t%s (%.1f)\n\n",
+		overallRiskColor(result.OverallLevel), result.OverallScore)
 
 	return w.Flush()
 }
