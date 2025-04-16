@@ -1,6 +1,3 @@
-#!/usr/bin/env node
-// filepath: /Users/derek/Documents/CSWork/EC521/supplychainattack-research/analyzers/javascript/analyzer.js
-
 const fs = require('fs');
 const path = require('path');
 const acorn = require('acorn');
@@ -9,6 +6,10 @@ const walk = require('acorn-walk');
 class VulnerabilityAnalyzer {
   constructor() {
     this.loadConfigurations()
+  }
+
+  getVulnerabilitySeverity(vulnType) {
+    return this.vulnerabilityPatterns[vulnType]?.severity || 5;
   }
 
 
@@ -35,9 +36,9 @@ class VulnerabilityAnalyzer {
 
       this.compiledPatterns = this.compileRegexPatterns();
 
-      console.log("Configuration files loadd successfully.");
+      // console.log("Configuration files loaded successfully.");
     } catch (error) {
-      console.error(`Error loading config files: ${err.message}`);
+      // console.error(`Error loading config files: ${err.message}`);
       throw error;
     }
   }
@@ -66,7 +67,7 @@ class VulnerabilityAnalyzer {
 
   analyzeFile(filePath) {
     try {
-      const fs = fs.readFileSync(filePath, 'utf8');
+      const content = fs.readFileSync(filePath, 'utf8');
       const results = {};
 
       // patern analysis
@@ -78,10 +79,18 @@ class VulnerabilityAnalyzer {
       // calc risk score
       const riskScore = this.calculateRiskScore(results);
 
+      let flattenedVulnerabilities = [];
+      for (const [vulnType, vulnList] of Object.entries(results)) {
+        if (vulnList.length > 0) {
+          flattenedVulnerabilities = flattenedVulnerabilities.concat(vulnList);
+        }
+      }
+
+
       return {
         file: filePath,
         language: "javascript",
-        vulnerabilities: results,
+        vulnerabilities: flattenedVulnerabilities,
         risk_score: riskScore,
         risk_level: this.getRiskLevel(riskScore)
       };
@@ -89,7 +98,8 @@ class VulnerabilityAnalyzer {
 
 
     } catch (err) {
-      console.error(`Error analyzing file ${filePath}: ${err.message}`);
+      // console.log(err)
+      // console.error(`Error analyzing file ${filePath}: ${err.message}`);
       return {
         file: filePath,
         language: "javascript",
@@ -279,6 +289,8 @@ class VulnerabilityAnalyzer {
   checkInsecureFileOperations(ast, content, results) {
     const lines = content.split('\n');
 
+    const severity = this.getVulnerabilitySeverity('insecure_file_operations');
+
     walk.simple(ast, {
       CallExpression(node) {
         // Check for fs module usage
@@ -304,7 +316,7 @@ class VulnerabilityAnalyzer {
               results.insecure_file_operations.push({
                 line: lineNumber,
                 code: lineContent,
-                severity: this.getVulnerabilitySeverity('insecure_file_operations'),
+                severity: severity,
                 type: 'insecure_file_operations',
                 description: 'File operation without path validation'
               });
@@ -317,6 +329,8 @@ class VulnerabilityAnalyzer {
 
   checkCommandExecution(ast, content, results) {
     const lines = content.split('\n');
+
+    const severity = this.getVulnerabilitySeverity('command_execution');
 
     walk.simple(ast, {
       CallExpression(node) {
@@ -338,7 +352,7 @@ class VulnerabilityAnalyzer {
               results.command_execution.push({
                 line: lineNumber,
                 code: lineContent,
-                severity: this.getVulnerabilitySeverity('command_execution'),
+                severity: severity,
                 type: "command_execution",
                 description: `Command execution with child_process.${node.callee.property.name} detected`
               });
@@ -372,6 +386,8 @@ class VulnerabilityAnalyzer {
     const lines = content.split('\n');
     const vulnType = 'suspicious_network_activity';
 
+    const severity = this.getVulnerabilitySeverity(vulnType);
+
     const networkModules = Object.keys(this.patterns.suspicious_network_funcs || {});
 
     walk.simple(ast, {
@@ -395,7 +411,7 @@ class VulnerabilityAnalyzer {
               results[vulnType].push({
                 line: lineNumber,
                 code: lineContent,
-                severity: this.getVulnerabilitySeverity(vulnType),
+                severity: severity,
                 type: vulnType,
                 description: `Suspicious network activity with ${objName}.${propName}`
               });
@@ -416,7 +432,7 @@ class VulnerabilityAnalyzer {
             results[vulnType].push({
               line: lineNumber,
               code: lineContent,
-              severity: this.getVulnerabilitySeverity(vulnType),
+              severity: severity,
               type: vulnType,
               description: 'Network request with fetch API'
             });
@@ -434,7 +450,7 @@ class VulnerabilityAnalyzer {
             results[vulnType].push({
               line: lineNumber,
               code: lineContent,
-              severity: this.getVulnerabilitySeverity(vulnType),
+              severity: severity,
               type: vulnType,
               description: `Network request with ${objName}.${propName}`
             });
@@ -454,7 +470,7 @@ class VulnerabilityAnalyzer {
           results[vulnType].push({
             line: lineNumber,
             code: lineContent,
-            severity: this.getVulnerabilitySeverity(vulnType),
+            severity: severity,
             type: vulnType,
             description: 'Network request with XMLHttpRequest'
           });
@@ -472,7 +488,7 @@ class VulnerabilityAnalyzer {
           results[vulnType].push({
             line: lineNumber,
             code: lineContent,
-            severity: this.getVulnerabilitySeverity(vulnType),
+            severity: severity,
             type: vulnType,
             description: 'WebSocket connection'
           });
@@ -481,18 +497,16 @@ class VulnerabilityAnalyzer {
     }.bind(this));
   }
 
-  getVulnerabilitySeverity(vulnType) {
-    return this.vulnerabilityPatterns[vulnType]?.severity || 5;
-  }
+  
 
   calculateRiskScore(vulnerabilities) {
     if (!vulnerabilities || vulnerabilities.length === 0) return 0;
 
     let maxSeverity = 0;
 
-    for ([vulnType, vulnList] of Object.entries(vulnerabilities)) {
+    for (const [vulnType, vulnList] of Object.entries(vulnerabilities)) {
       if (vulnList.length > 0) {
-        const severity = this.getVulnerabilitySeverity(vulnType);
+        let severity = this.getVulnerabilitySeverity(vulnType);
         if (severity > maxSeverity) {
           maxSeverity = severity;
         }
@@ -509,6 +523,15 @@ class VulnerabilityAnalyzer {
     }
 
     return Math.min(maxSeverity, 10);
+  }
+
+  getRiskLevel(riskScore) {
+    for (const threshold of this.riskLevels?.risk_levels) {
+      if (riskScore >= threshold.min && riskScore <= threshold.max) {
+        return threshold.level;
+      }
+    }
+    return this.riskLevels?.default_level;
   }
 
 }

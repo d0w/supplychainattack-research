@@ -48,7 +48,7 @@
         "description": "Suspicious network calls or data exfiltration attempts"
     },
     "obfuscated_code": {
-        "severity": 4,
+        "severity": 1,
         "description": "Obfuscated or encoded code that might hide malicious intent"
     },
     "unauthorized_data_access": {

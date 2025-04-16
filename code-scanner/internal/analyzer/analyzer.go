@@ -1,4 +1,3 @@
-// internal/analyzer/analyzer.go
 package analyzer
 
 import (
@@ -148,7 +147,7 @@ func (e *ExternalAnalyzer) Analyze(filePath string) (*models.FileResult, error) 
 
 	// print output
 	// fmt.Printf("Analyzer output for %s on file %s: %s\n", e.Language, filePath, string(output))
-
+	// fmt.Println("Analyzer output:", string(output))
 	// parse output
 	var result models.FileResult
 	if err := json.Unmarshal(output, &result); err != nil {

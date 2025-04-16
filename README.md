@@ -23,6 +23,25 @@ Program is written in multiple languages. Go is used as the primary bootstrapper
 }
 ```
 
+For the dependency-scanner, this format is maintained, but slightly modified
+
+```json
+{
+  "file": "/path/to/requirements-file",
+  "language": "language for requirements-file",
+  "vulnerabilities": [
+    {
+      "type": "CVE or other identifier", 
+      "severity": 9,
+      "line": 0,
+      "code": "dependency@version",
+      "description": "Description given by CVE or other known database"
+    }
+  ],
+  "risk_score": 7.5
+}
+```
+
 # Code Scanner Process
 
 One type of mitigation for supply chain attacks involves scanning dependencies for any vulnerabilities.
