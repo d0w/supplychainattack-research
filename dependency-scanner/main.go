@@ -5,7 +5,9 @@ import (
 	"os"
 	"path/filepath"
 	"runtime"
+	"time"
 
+	"github.com/briandowns/spinner"
 	"github.com/d0w/supplychainattack-research/dependency-scanner/internal/analyzer"
 	"github.com/spf13/cobra"
 )
@@ -60,12 +62,15 @@ providing a risk assessment and detailed vulnerability reports.`,
 			depScanner := analyzer.NewScanner(defaultAnalyzersDir, 1)
 			reporter := analyzer.NewReporter(writer)
 
+			s := spinner.New(spinner.CharSets[9], 100*time.Millisecond)
+			s.Start()
 			fmt.Fprintf(os.Stdout, "Scanning file: %s\n", filePath)
 			result, err := depScanner.ScanDepFile(filePath, depLanguage)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Failed to scan file: %v\n", err)
 				os.Exit(1)
 			}
+			s.Stop()
 
 			// Generate report
 			var reportErr error

@@ -105,7 +105,7 @@ func (r *Reporter) ReportText(result *ScanResult, detailed bool) error {
 				fmt.Fprintln(r.writer, "------------")
 
 				for _, vuln := range file.Vulnerabilities {
-					fmt.Fprintf(r.writer, "- %s: ", vuln.Type)
+					fmt.Fprintf(r.writer, "- %s (%s): ", vuln.Code, vuln.Type)
 
 					// Print the wrapped description
 					wrapped := wrapText(vuln.Description, 70, len(vuln.Type)+4)

@@ -8,6 +8,7 @@ import (
 	"github.com/d0w/supplychainattack-research/code-scanner/internal/analyzer"
 	"github.com/d0w/supplychainattack-research/code-scanner/internal/detector"
 	"github.com/d0w/supplychainattack-research/code-scanner/internal/models"
+	"github.com/schollz/progressbar/v3"
 )
 
 type Scanner struct {
@@ -68,6 +69,9 @@ func (s *Scanner) ScanDirectory(rootDir string) (*models.ScanResult, []error, er
 	resultsChan := make(chan *models.FileResult, len(files)) // channel to collect results
 	errorsChan := make(chan error, len(files))               // channel to collect errors
 
+	// progress bar
+	bar := progressbar.Default(int64(len(files)), "Scanning files...")
+
 	// process each file concurrently
 	for _, file := range files {
 		// add file to wait group
@@ -75,6 +79,7 @@ func (s *Scanner) ScanDirectory(rootDir string) (*models.ScanResult, []error, er
 		// launch a goroutine to process the file
 		go func(filePath string) {
 			defer wg.Done()
+			defer bar.Add(1)
 			semaphore <- struct{}{}        // acquire sem. blocks if the semaphore is full
 			defer func() { <-semaphore }() // release sem
 

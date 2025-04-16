@@ -293,7 +293,7 @@ def analyze_dependencies(requirements_path):
                         "severity": severity,
                         "type": vuln_aliases[0]
                         or vuln_id,  # Use the original ID as the type
-                        "description": f"{description}. Fix: {fix_text}",
+                        "description": f"{description}. \n\nFix: {fix_text}",
                     }
                 )
 

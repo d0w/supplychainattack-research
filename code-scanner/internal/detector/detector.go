@@ -1,9 +1,13 @@
 package detector
 
 import (
+	"fmt"
 	"os"
 	"path/filepath"
 	"strings"
+	"time"
+
+	"github.com/briandowns/spinner"
 )
 
 // map languages to file extensions
@@ -49,6 +53,8 @@ func DetectLanguage(filePath string) string {
 func FindCodeFiles(rootDir string) ([]string, error) {
 	var files []string
 
+	spin := spinner.New(spinner.CharSets[9], 100*time.Millisecond)
+	spin.Start()
 	err := filepath.Walk(rootDir, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
@@ -74,9 +80,11 @@ func FindCodeFiles(rootDir string) ([]string, error) {
 				files = append(files, path)
 			}
 		}
-
 		return nil
 	})
+
+	spin.Stop()
+	fmt.Println()
 
 	return files, err
 }
