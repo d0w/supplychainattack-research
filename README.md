@@ -2,9 +2,22 @@
 
 Cybersecurity class project on mitigating supply chain attacks.
 
-Program is written in multiple languages. Go is used as the primary bootstrapper that handles monitoring code changes and running routines. Inputted files are analyzed with a tool written in that respective language. For example, a Python file will be analyzed with `analyzer.py`.
+This repository includes multiple tools (mostly CLI tools) that serve to help mitigate the risks or effects of supply chain attacks. Primarily, these tools will help with both contributors to a widely-used dependency, or for any downstream users of a dependency.
+
+`code-scanner` is the static analysis tool that scans a directory, determines the file language, and runs the appropriate analysis script. This will output a list of vulnerabilities, their locations, and an overall risk score.
+
+- This tool requires the source code of the dependency to be present, but can help with zero-day supply chain attacks.
+- In theory, this tool can be used for environments such as open-source where, on a pull-request, a hook (such as a GitHub Action) is triggered, which will run this tool against the code that somebody is attempting to contribute. This will help catch any malicious code that is attempting to be injected into the codebase that may be used by many dependents.
+
+`dependency-scanner` is the auditing tool that scans a dependency file (e.g. requirements.txt, package.json, etc.) and checks for known vulnerabilities. This will output a list of vulnerable dependencies and their locations.
+
+- This does not require the source code of the dependency to be present, but does not help with zero-day supply chain attacks.
+- In theory, this tool can be used by anyone who decides to install new dependencies, or needs to regularly check their existing ones. This can be binded to events such as pull requests, git commits, or simply when the dependency file is updated. This will help catch any malicious dependencies that have vulnerabilities that may unknown to or unwillingly installed by the user.
+- This tool can also be used for typo-squatting attacks, where a malicious dependency is installed instead of the intended one. This can be done by checking the dependency file against a list of known malicious dependencies.
 
 ## Common output format
+
+This is the common output format that all the analyzer scripts will output. Since these scripts are written in a variety of languages, they abide by this to abstract the language barrier. Behind the scenes, each script will write to STDOUT which gets piped into the Go module.
 
 ```json
 {
@@ -44,7 +57,7 @@ For the dependency-scanner, this format is maintained, but slightly modified
 
 # Code Scanner Process
 
-One type of mitigation for supply chain attacks involves scanning dependencies for any vulnerabilities.
+One type of mitigation for supply chain attacks involves scanning code for any vulnerabilities. Whether this be run on dependencies or code that might be pushed to a repository that has many dependents, this can help mitigate some attacks against software supply chains.
 
 The code scanner tool is used to determine the vulnerability of a directory and outputting a list of problematic lines, the severity of code, and the type of vulnerability.
 
@@ -82,7 +95,7 @@ Better for understanding context
 
 \<Not yet implemented\>
 
-Another possible method with static analysis over string matching and AST parsing is to leverage the power of LLMs. Using an LLM's reasoning capabilities, it can identify much more difficult or nuanced vulnerabilities. Though, this comes with the cost of speed and thus is only used for files or directories specified by the user. Automatic parsing is only done with string and AST analysis.
+Another possible method with static analysis over string matching and AST parsing is to leverage the power of LLMs. Using an LLM's reasoning capabilities, it can identify much more difficult or nuanced vulnerabilities. Though, this comes with the cost of speed and resources and thus is only used for files or directories specified by the user. Automatic parsing is only done with string and AST analysis.
 
 ## 3. Output Results
 
@@ -95,3 +108,19 @@ The risk score is calculated as follows
 ```
 
 This is essentially finding the max severity vulnerability. Vulnerabilities with many repeats will be weighted higher with diminishing returns.
+
+</br>
+
+# Dependency Scanner Process
+
+Unlike the code scanner, this relies on known vulnerabilities of dependencies, but does not need to statically analyze source code nor have source code to begin with. This helps with dependencies that might have been installed as binaries. As such, this does not prevent zero-day supply chain attacks, but it can help developers find out if they have outdated code with patched vulnerabilities.
+
+## 1. Find Dependency File
+
+The user gives a dependency file (e.g. requirements.txt, package.json, etc.). The module will attempt to parse the language that this file is for based on common semantics. If the file is not recognized, the user will be prompted to specify the language. The module will then run the appropriate analyzer script for that language.
+
+## 2. Auditing
+
+Typically, language-specific package managers have a built-in audit command. This will check the dependencies against known vulnerabilities and output a list of vulnerable dependencies. The module will run this command and parse the output to find the vulnerabilities. The Go module will call os.exec on the analyzer script, which then handles this auditing. This could also be done without a separate script, if the tools used are strictly CLI tools. We opted to stay with using external analyzer scripts, as it allows the usage of different auditing packages if necessary.
+
+Some auditors might provide the CVE (common vulnerabilities and exposures) ID, which we then send to the NVD (National Vulnerability Database) to get more information (e.g. CVE Score) about the vulnerability. This will be used in conjunction with existing information to generate the vulnerability report.
