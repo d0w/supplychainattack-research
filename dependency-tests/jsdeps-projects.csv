@@ -1,0 +1,2 @@
+num_installed,num_actual,command,description
+8,131,"npm i express mongodb mongoose dotenv bcryptjs jsonwebtoken winston react cors cookie-parser","General MERN Fullstack Application that is very popular among JS web applications"
