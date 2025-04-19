@@ -439,7 +439,7 @@ class VulnerabilityAnalyzer:
             if isinstance(node, ast.Call) and isinstance(node.func, ast.Name) and node.func.id == 'open':
                 if len(node.args) > 0:
                     # Check if there's direct user input or concatenation without validation
-                    if isinstance(node.args[0], ast.Name) or (isinstance(node.args[0], ast.BinOp) and not self._has_path_validation(content, node.lineno)):
+                    if isinstance(node.args[0], ast.Name) or (isinstance(node.args[0], ast.BinOp) and not self.has_path_validation(content, node.lineno)):
                         line_num = node.lineno
                         self.results["path_traversal"].append({
                             "line": line_num,
@@ -450,11 +450,22 @@ class VulnerabilityAnalyzer:
                             "description": "Potential path traversal vulnerability"
                         })
 
+    
     def has_path_validation(self, content, line_num):
         """Check if there's path validation before the specified line"""
         lines = content.split('\n')[:line_num]
         for line in reversed(lines):
+            # Original checks
             if re.search(r'os\.path\.normpath|os\.path\.abspath|\.startswith|\.endswith', line):
+                return True
+            # Additional checks for more validation methods
+            if re.search(r'os\.path\.exists|os\.path\.isfile|os\.path\.isdir', line):
+                return True
+            # Check for pathlib validation
+            if re.search(r'pathlib\.Path|Path\(.*\)\.resolve|commonpath', line):
+                return True
+            # Check for str conversion and multi-level validation
+            if re.search(r'str\(.*\)|os\.path\.abspath.*\.startswith', line):
                 return True
         return False
 
