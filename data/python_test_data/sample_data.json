@@ -1,0 +1,62 @@
+[
+    {
+      "id": 1,
+      "name": "Product A",
+      "category": "Electronics",
+      "price": 299.99,
+      "stock": 150,
+      "ratings": {
+        "average": 4.5,
+        "count": 120
+      },
+      "tags": ["popular", "sale", "featured"]
+    },
+    {
+      "id": 2,
+      "name": "Product B",
+      "category": "Home & Kitchen",
+      "price": 49.95,
+      "stock": 300,
+      "ratings": {
+        "average": 4.2,
+        "count": 85
+      },
+      "tags": ["new", "eco-friendly"]
+    },
+    {
+      "id": 3,
+      "name": "Product C",
+      "category": "Electronics",
+      "price": 199.50,
+      "stock": 75,
+      "ratings": {
+        "average": 3.8,
+        "count": 42
+      },
+      "tags": ["clearance"]
+    },
+    {
+      "id": 4,
+      "name": "Product D",
+      "category": "Office Supplies",
+      "price": 12.99,
+      "stock": 1200,
+      "ratings": {
+        "average": 4.0,
+        "count": 230
+      },
+      "tags": ["popular", "office", "bulk"]
+    },
+    {
+      "id": 5,
+      "name": "Product E",
+      "category": "Home & Kitchen",
+      "price": 129.99,
+      "stock": 45,
+      "ratings": {
+        "average": 4.7,
+        "count": 28
+      },
+      "tags": ["premium", "sale"]
+    }
+  ]

