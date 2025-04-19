@@ -1,0 +1,29 @@
+{
+    "risk_levels": [
+        {
+            "min": 0,
+            "max": 3,
+            "level": "Low",
+            "description": "Few or no vulnerabilities detected. Low chance of malicious code."
+        },
+        {
+            "min": 3,
+            "max": 6,
+            "level": "Medium",
+            "description": "Some vulnerabilities detected. Requires review but may be false positives."
+        },
+        {
+            "min": 6,
+            "max": 8,
+            "level": "High",
+            "description": "Significant vulnerabilities detected. High likelihood of suspicious activity."
+        },
+        {
+            "min": 8,
+            "max": 10,
+            "level": "Critical",
+            "description": "Critical vulnerabilities or confirmed malicious patterns detected. Immediate action required."
+        }
+    ],
+    "default_level": "Unknown"
+  }

