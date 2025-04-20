@@ -1,0 +1,12 @@
+adyen
+agentscope
+flask
+django
+requests
+werkzeug
+jinja2
+urllib3
+cryptography
+pillow
+pyyaml
+sqlalchemy
