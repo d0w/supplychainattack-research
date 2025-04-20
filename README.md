@@ -95,6 +95,17 @@ This is the tool to scan a requirements file (requirements.txt, package.json are
 
 </br>
 
+## GPT Scanner
+
+This is the tool to scan a codebase and use openai's LLM to analyze the files and search for any supply chain vulnerabilities.
+
+**Pre-requisites**
+- openai 
+- python-dotenv 
+- tiktoken
+
+1. Install the dependencies to run this analyzer
+2. Run `python /path/to/analyzer /path/to/codebase`
 
 
 # Code Scanner Process
