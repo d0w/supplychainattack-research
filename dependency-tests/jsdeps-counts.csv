@@ -3,7 +3,7 @@ trial,num_installed,num_actual,package_installed,package_stats_weeklydownloads,p
 2,2,49,chalk,303617130,124656
 3,3,50,request,NaN,35681
 4,4,51,commander,190260514,92161
-5,5,52,react,37466714,246932,
+5,5,52,react,37466714,246932
 6,6,123,express,37813011,90361
 7,7,124,debug,335251394,56092
 8,8,128,async,61992014,34267
