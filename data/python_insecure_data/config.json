@@ -1,0 +1,25 @@
+{
+    "api": {
+      "url": "https://api.example.com/v1",
+      "timeout": 30
+    },
+    "database": {
+      "host": "localhost",
+      "port": 5432,
+      "name": "datadb"
+    },
+    "logging": {
+      "level": "info",
+      "file": "app.log"
+    },
+    "processing": {
+      "max_threads": 4,
+      "chunk_size": 1000,
+      "output_format": "json"
+    },
+    "features": {
+      "enable_analytics": true,
+      "enable_caching": true,
+      "debug_mode": false
+    }
+  }

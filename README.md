@@ -71,14 +71,18 @@ This is the tool to scan a directory statically. It requires the source code of 
 1. Navigate to the `code-scanner/analyzers/javascript`
 2. Run `npm install` to install the dependencies for the javascript analyzer
 
-- python analyzer does not require any additional dependencies currently
+   - python analyzer does not require any additional dependencies currently
 
 3. Run the `code-scanner` binary by navigating to the code-scanner directory and running `go run main.go /path/to/directory`
+   - You can also run the binary directly by running `./code-scanner /path/to/directory`
+   - Running `./code-scanner` without any arguments will print the usage instructions
 
-- You can also run the binary directly by running `./code-scanner /path/to/directory`
-- Running `./code-scanner` without any arguments will print the usage instructions
+
 
 ## Dependency Scanner
+
+This is the tool to scan a requirements file (requirements.txt, package.json are supported currently). All you need is the requirements file and the corresponding package manager listed in the pre-requisites.
+
 
 **Pre-requisites**
 
@@ -88,14 +92,25 @@ This is the tool to scan a directory statically. It requires the source code of 
 - Python (>=3.10)
 
 1. Install `pip-audit` with `pip install pip-audit`.
-
-- You can opt to install this globally or in a virtual environment. The script will run the `pip-audit` as if it were in a shell, so make sure you can run `pip-audit` within your shell.
+   - You can opt to install this globally or in a virtual environment. The script will run the `pip-audit` as if it were in a shell, so make sure you can run `pip-audit` within your shell.
 
 2. Navigate to the `dependency-scanner/` directory and run the binary either by `go run main.go /path/to/<requirements-file>` or `./dependency-scanner /path/to/requirements.txt`
-
-- Running the binary without any arguments will print the usage instructions
+   - Running the binary without any arguments will print the usage instructions
 
 </br>
+
+## GPT Scanner
+
+This is the tool to scan a codebase and use openai's LLM to analyze the files and search for any supply chain vulnerabilities.
+
+**Pre-requisites**
+- openai 
+- python-dotenv 
+- tiktoken
+
+1. Install the dependencies to run this analyzer
+2. Run `python /path/to/analyzer /path/to/codebase`
+
 
 # Code Scanner Process
 
