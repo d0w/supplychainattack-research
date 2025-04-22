@@ -1,0 +1,2 @@
+num_installed,num_actual,command,description
+7,45,"pip install numpy matplotlib torch pandas scikit-learn seaborn skorch","Popular data science libraries"
