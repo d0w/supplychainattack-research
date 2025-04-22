@@ -70,15 +70,19 @@ This is the tool to scan a directory statically. It requires the source code of 
 
 1. Navigate to the `code-scanner/analyzers/javascript`
 2. Run `npm install` to install the dependencies for the javascript analyzer
+
    - python analyzer does not require any additional dependencies currently
 
 3. Run the `code-scanner` binary by navigating to the code-scanner directory and running `go run main.go /path/to/directory`
    - You can also run the binary directly by running `./code-scanner /path/to/directory`
    - Running `./code-scanner` without any arguments will print the usage instructions
 
+
+
 ## Dependency Scanner
 
 This is the tool to scan a requirements file (requirements.txt, package.json are supported currently). All you need is the requirements file and the corresponding package manager listed in the pre-requisites.
+
 
 **Pre-requisites**
 
