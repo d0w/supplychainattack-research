@@ -4,11 +4,11 @@
     "description": "Hardcoded credentials or API keys in code"
   },
   "command_injection": {
-    "severity": 10,
+    "severity": 5,
     "description": "Possible command injection vulnerability"
   },
   "insecure_deserialization": {
-    "severity": 8,
+    "severity": 2,
     "description": "Unsafe deserialization of user input"
   },
   "sql_injection": {
@@ -24,7 +24,7 @@
     "description": "Insecure SSL/TLS configuration"
   },
   "exec_eval": {
-    "severity": 10,
+    "severity": 7,
     "description": "Use of exec() or eval() on untrusted input"
   },
   "bind_all_interfaces": {

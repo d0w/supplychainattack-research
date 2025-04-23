@@ -1,4 +1,4 @@
-# supplychainattack-research
+# VulScan - A suite of CLI tools for code and dependency security
 
 Cybersecurity class project on mitigating supply chain attacks.
 
@@ -10,6 +10,8 @@ This repository includes multiple tools (mostly CLI tools) that serve to help mi
 - In theory, this tool can be used for environments such as open-source where, on a pull-request, a hook (such as a GitHub Action) is triggered, which will run this tool against the code that somebody is attempting to contribute. This will help catch any malicious code that is attempting to be injected into the codebase that may be used by many dependents.
 
 `dependency-scanner` is the auditing tool that scans a dependency file (e.g. requirements.txt, package.json, etc.) and checks for known vulnerabilities. This will output a list of vulnerable dependencies and their locations.
+
+`GPT-Scanner`
 
 - This does not require the source code of the dependency to be present, but does not help with zero-day supply chain attacks.
 - In theory, this tool can be used by anyone who decides to install new dependencies, or needs to regularly check their existing ones. This can be binded to events such as pull requests, git commits, or simply when the dependency file is updated. This will help catch any malicious dependencies that have vulnerabilities that may unknown to or unwillingly installed by the user.
@@ -77,12 +79,9 @@ This is the tool to scan a directory statically. It requires the source code of 
    - You can also run the binary directly by running `./code-scanner /path/to/directory`
    - Running `./code-scanner` without any arguments will print the usage instructions
 
-
-
 ## Dependency Scanner
 
 This is the tool to scan a requirements file (requirements.txt, package.json are supported currently). All you need is the requirements file and the corresponding package manager listed in the pre-requisites.
-
 
 **Pre-requisites**
 
@@ -104,13 +103,13 @@ This is the tool to scan a requirements file (requirements.txt, package.json are
 This is the tool to scan a codebase and use openai's LLM to analyze the files and search for any supply chain vulnerabilities.
 
 **Pre-requisites**
-- openai 
-- python-dotenv 
+
+- openai
+- python-dotenv
 - tiktoken
 
 1. Install the dependencies to run this analyzer
 2. Run `python /path/to/analyzer /path/to/codebase`
-
 
 # Code Scanner Process
 

@@ -1,0 +1,36 @@
+{
+  "name": "javascript_fullstack_data",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "async": "^3.2.6",
+    "axios": "^1.8.4",
+    "bcryptjs": "^3.0.2",
+    "chalk": "^5.4.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "fs-extra": "^11.3.0",
+    "jsonwebtoken": "^9.0.2",
+    "maath": "^0.10.8",
+    "mongodb": "^6.16.0",
+    "mongoose": "^8.13.2",
+    "nodemon": "^1.0.0",
+    "prisma": "^6.6.0",
+    "react": "^18.0.0-alpha-9b76d2d7b-20210719",
+    "tailwindcss": "^4.1.4",
+    "tslib": "^2.8.1",
+    "underscore": "^1.13.7",
+    "vue": "^3.5.13",
+    "winston": "^3.17.0",
+    "yargs": "^17.7.2"
+  }
+}

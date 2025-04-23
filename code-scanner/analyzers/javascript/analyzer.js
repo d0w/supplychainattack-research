@@ -277,7 +277,7 @@ class VulnerabilityAnalyzer {
           results.exec_eval.push({
             line: lineNumber,
             code: lineContent,
-            severity: 10,
+            severity: this.getVulnerabilitySeverity("exec_eval"),
             type: 'exec_eval',
             description: 'Usage of new Function() - potential for code injection'
           });
@@ -372,7 +372,7 @@ class VulnerabilityAnalyzer {
             results[vulnType].push({
               line: lineNumber,
               code: lineContent,
-              severity: 10,
+              severity: this.getVulnerabilitySeverity(vulnType),
               type: vulnType,
               description: `Command execution with ${node.callee.object.name}.call`
             });
@@ -497,7 +497,7 @@ class VulnerabilityAnalyzer {
     }.bind(this));
   }
 
-  
+
 
   calculateRiskScore(vulnerabilities) {
     if (!vulnerabilities || vulnerabilities.length === 0) return 0;

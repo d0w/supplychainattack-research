@@ -18,3 +18,4 @@ pyyaml
 fsspec
 google-api-core
 matplotlib
+autocrop < 1.1.0
