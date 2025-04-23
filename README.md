@@ -11,11 +11,15 @@ This repository includes multiple tools (mostly CLI tools) that serve to help mi
 
 `dependency-scanner` is the auditing tool that scans a dependency file (e.g. requirements.txt, package.json, etc.) and checks for known vulnerabilities. This will output a list of vulnerable dependencies and their locations.
 
-`GPT-Scanner`
-
 - This does not require the source code of the dependency to be present, but does not help with zero-day supply chain attacks.
 - In theory, this tool can be used by anyone who decides to install new dependencies, or needs to regularly check their existing ones. This can be binded to events such as pull requests, git commits, or simply when the dependency file is updated. This will help catch any malicious dependencies that have vulnerabilities that may unknown to or unwillingly installed by the user.
 - This tool can also be used for typo-squatting attacks, where a malicious dependency is installed instead of the intended one. This can be done by checking the dependency file against a list of known malicious dependencies.
+
+`GPT-Scanner` is another static analysis tool that similarly scans a director, determines a file language and inputs each file as an attachment to our prompt in OpenAI's LLM. This develops a list of vulerabilities and a risk score for each file.
+
+- Similar to code-scanner, this tool requires the source code of the dependency to be present.
+- This tool also works best with smaller file sizes due to the high cost of using an LLM. 
+- This tool should be used in combination with the other static analysis tool (code-scanner) to detect any other "intent-based" lines of vulnerable code. This analysis tool does its best to not just detect keywords or lack of appropriate checks, but looks at the code as a whole to see if there are any vulnerabilities. 
 
 ## Common output format
 
@@ -109,7 +113,7 @@ This is the tool to scan a codebase and use openai's LLM to analyze the files an
 - tiktoken
 
 1. Install the dependencies to run this analyzer
-2. Run `python /path/to/analyzer /path/to/codebase`
+2. Run `python /gpt-scanner/analyzers/python/analyzer.py /path/to/codebase`
 
 # Code Scanner Process
 
