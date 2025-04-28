@@ -21,45 +21,7 @@ This repository includes multiple tools (mostly CLI tools) that serve to help mi
 - This tool also works best with smaller file sizes due to the high cost of using an LLM. 
 - This tool should be used in combination with the other static analysis tool (code-scanner) to detect any other "intent-based" lines of vulnerable code. This analysis tool does its best to not just detect keywords or lack of appropriate checks, but looks at the code as a whole to see if there are any vulnerabilities. 
 
-## Common output format
 
-This is the common output format that all the analyzer scripts will output. Since these scripts are written in a variety of languages, they abide by this to abstract the language barrier. Behind the scenes, each script will write to STDOUT which gets piped into the Go module.
-
-```json
-{
-  "file": "/path/to/file",
-  "language": "python",
-  "vulnerabilities": [
-    {
-      "type": "sql_injection", 
-      "severity": 9,
-      "line": 42,
-      "code": "query = f\"SELECT * FROM users WHERE id = '{user_id}'\"",
-      "description": "Possible SQL injection vulnerability"
-    }
-  ],
-  "risk_score": 7.5
-}
-```
-
-For the dependency-scanner, this format is maintained, but slightly modified
-
-```json
-{
-  "file": "/path/to/requirements-file",
-  "language": "language for requirements-file",
-  "vulnerabilities": [
-    {
-      "type": "CVE or other identifier", 
-      "severity": 9,
-      "line": 0,
-      "code": "dependency@version",
-      "description": "Description given by CVE or other known database"
-    }
-  ],
-  "risk_score": 7.5
-}
-```
 
 # How to run
 
@@ -80,8 +42,10 @@ This is the tool to scan a directory statically. It requires the source code of 
    - python analyzer does not require any additional dependencies currently
 
 3. Run the `code-scanner` binary by navigating to the code-scanner directory and running `go run main.go /path/to/directory`
-   - You can also run the binary directly by running `./code-scanner /path/to/directory`
+   - You can also run the binary directly by compiling the go module `go build .`
    - Running `./code-scanner` without any arguments will print the usage instructions
+4. By default, `code-scanner/analyzers/metrics.json` has severity weights 0-10. You can configure these (0-10) to suit your needs for what type of vulnerabilities matter more. A higher value will indicate more emphasis on that vulnerability.
+5. `code-scanner/analyzers/patterns.json` shows default patterns that regex scanning checks for. You can add regex expressions under certain vulnerability types if you'd like.
 
 ## Dependency Scanner
 
@@ -97,7 +61,7 @@ This is the tool to scan a requirements file (requirements.txt, package.json are
 1. Install `pip-audit` with `pip install pip-audit`.
    - You can opt to install this globally or in a virtual environment. The script will run the `pip-audit` as if it were in a shell, so make sure you can run `pip-audit` within your shell.
 
-2. Navigate to the `dependency-scanner/` directory and run the binary either by `go run main.go /path/to/<requirements-file>` or `./dependency-scanner /path/to/requirements.txt`
+2. Navigate to the `dependency-scanner/` directory and run it either by `go run main.go /path/to/<requirements-file>` or compiling with `go build .` and running `./dependency-scanner /path/to/requirements.txt`
    - Running the binary without any arguments will print the usage instructions
 
 </br>
@@ -151,11 +115,6 @@ Avoids false positives in comments and strings
 Can analyze complex relationships between nodes
 Better for understanding context
 
-### 2.a LLM Analysis
-
-\<Not yet implemented\>
-
-Another possible method with static analysis over string matching and AST parsing is to leverage the power of LLMs. Using an LLM's reasoning capabilities, it can identify much more difficult or nuanced vulnerabilities. Though, this comes with the cost of speed and resources and thus is only used for files or directories specified by the user. Automatic parsing is only done with string and AST analysis.
 
 ## 3. Output Results
 
@@ -184,3 +143,46 @@ The user gives a dependency file (e.g. requirements.txt, package.json, etc.). Th
 Typically, language-specific package managers have a built-in audit command. This will check the dependencies against known vulnerabilities and output a list of vulnerable dependencies. The module will run this command and parse the output to find the vulnerabilities. The Go module will call os.exec on the analyzer script, which then handles this auditing. This could also be done without a separate script, if the tools used are strictly CLI tools. We opted to stay with using external analyzer scripts, as it allows the usage of different auditing packages if necessary.
 
 Some auditors might provide the CVE (common vulnerabilities and exposures) ID, which we then send to the NVD (National Vulnerability Database) to get more information (e.g. CVE Score) about the vulnerability. This will be used in conjunction with existing information to generate the vulnerability report.
+
+
+# Additional Information
+
+## Common output format
+
+This is the common output format that all the analyzer scripts will output. Since these scripts are written in a variety of languages, they abide by this to abstract the language barrier. Behind the scenes, each script will write to STDOUT which gets piped into the Go module.
+
+```json
+{
+  "file": "/path/to/file",
+  "language": "python",
+  "vulnerabilities": [
+    {
+      "type": "sql_injection", 
+      "severity": 9,
+      "line": 42,
+      "code": "query = f\"SELECT * FROM users WHERE id = '{user_id}'\"",
+      "description": "Possible SQL injection vulnerability"
+    }
+  ],
+  "risk_score": 7.5
+}
+```
+
+For the dependency-scanner, this format is maintained, but slightly modified
+
+```json
+{
+  "file": "/path/to/requirements-file",
+  "language": "language for requirements-file",
+  "vulnerabilities": [
+    {
+      "type": "CVE or other identifier", 
+      "severity": 9,
+      "line": 0,
+      "code": "dependency@version",
+      "description": "Description given by CVE or other known database"
+    }
+  ],
+  "risk_score": 7.5
+}
+```
