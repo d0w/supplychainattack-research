@@ -2,7 +2,7 @@
 
 Cybersecurity class project on mitigating supply chain attacks.
 
-This repository includes multiple tools (mostly CLI tools) that serve to help mitigate the risks or effects of supply chain attacks. Primarily, these tools will help with both contributors to a widely-used dependency, or for any downstream users of a dependency.
+This repository includes multiple tools written in Go (mostly CLI tools) that serve to help mitigate the risks or effects of supply chain attacks. Primarily, these tools will help with both contributors to a widely-used dependency, or for any downstream users of a dependency.
 
 `code-scanner` is the static analysis tool that scans a directory, determines the file language, and runs the appropriate analysis script. This will output a list of vulnerabilities, their locations, and an overall risk score.
 
